@@ -1,0 +1,23 @@
+.map{
+    width: 100%;
+    height: 88vh;
+    margin-top: 81px;
+}
+
+.control-change-basemap{
+    position: fixed;
+    z-index: 9999;
+    right: 10px;
+    top: 90px;
+    background: #DCDCDCdd;
+    border: 1px solid rgb(102, 102, 102);
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.control-change-basemap > label{
+    display: block;
+    margin: 10px 0;
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+}
