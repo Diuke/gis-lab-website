@@ -66,10 +66,18 @@
         <main class="">
           <div id="map" class="map"></div>
 
-          <div class="control-change-basemap">
+          <div class="control control-change-basemap">
+            <h4>Basemap</h4>
             <label><input type="radio" name="basemap" checked onclick="changeBasemap(0)"> OSM</label>
             <label><input type="radio" name="basemap" onclick="changeBasemap(1)"> Bing</label>
             <label><input type="radio" name="basemap" onclick="changeBasemap(2)"> Stamen</label>
+          </div>
+
+          <div class="control control-select-layers">
+            <h4>Vectors</h4>
+            <label><input type="checkbox" name="layer1"> Layer 1</label>
+            <label><input type="checkbox" name="layer2"> Layer 2</label>
+            <label><input type="checkbox" name="layer3"> Layer 3</label>
           </div>
 
         </main><!-- End #main -->

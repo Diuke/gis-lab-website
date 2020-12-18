@@ -6,7 +6,7 @@
 
 .control-change-basemap{
     position: fixed;
-    z-index: 9999;
+    z-index: 10;
     right: 10px;
     top: 90px;
     background: #DCDCDCdd;
@@ -15,7 +15,18 @@
     padding: 10px;
 }
 
-.control-change-basemap > label{
+.control-select-layers{
+    position: fixed;
+    z-index: 9999;
+    right: 10px;
+    top: 300px;
+    background: #DCDCDCdd;
+    border: 1px solid rgb(102, 102, 102);
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.control > label{
     display: block;
     margin: 10px 0;
     font-size: 20px;

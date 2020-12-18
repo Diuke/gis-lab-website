@@ -2,7 +2,7 @@ var app = new Vue({
     el: '#app',
     data: {
         message: 'Hello Vue!',
-        target: "map"
+        target: "map",
     },
 
     mounted: function(){
@@ -14,6 +14,7 @@ var app = new Vue({
     }
 })
 
+// Array of basemap sources
 let basemap_array = [
     new ol.source.OSM(),
     new ol.source.XYZ({
@@ -28,15 +29,21 @@ let basemap_array = [
         layer: 'terrain',
     })
 ];
+
+//Main basemap layer
 let basemap_layer = new ol.layer.Tile({
     source: basemap_array[0]
 });
 
+/**
+ * Changes the basemap source by setting the source as one of the basemap_array available sources
+ * @param {Index of source in basemap_array} index 
+ */
 function changeBasemap(index){
     basemap_layer.setSource(basemap_array[index]);
 }
 
-//let changeLayerControl = ol.Control()
+// Controls of the maps - So far only the defaults
 let controls = ol.control.defaults({
     zoom: true,
     attribution: true,
