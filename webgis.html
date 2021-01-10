@@ -29,7 +29,8 @@
     <link href="assets/css/webgis.css" rel="stylesheet">
 
     <!-- OpenLayers css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css" type="text/css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css" type="text/css">
 
 
     <!-- =======================================================
@@ -64,21 +65,76 @@
         </header><!-- End #header -->
 
         <main class="">
-          <div id="map" class="map"></div>
+            <div id="map" class="map"></div>
 
-          <div class="control control-change-basemap">
-            <h4>Basemap</h4>
-            <label><input type="radio" name="basemap" checked onclick="changeBasemap(0)"> OSM</label>
-            <label><input type="radio" name="basemap" onclick="changeBasemap(1)"> Bing</label>
-            <label><input type="radio" name="basemap" onclick="changeBasemap(2)"> Stamen</label>
-          </div>
+            <div class="base-control control-change-basemap">
+                <h4>Basemap</h4>
+                <label><input type="radio" name="basemap" checked @click="changeBasemap(0)"> OSM</label>
+                <label><input type="radio" name="basemap" @click="changeBasemap(1)"> Bing</label>
+                <label><input type="radio" name="basemap" @click="changeBasemap(2)"> Stamen</label>
+            </div>
 
-          <div class="control control-select-layers">
-            <h4>Vectors</h4>
-            <label><input type="checkbox" name="layer1"> Layer 1</label>
-            <label><input type="checkbox" name="layer2"> Layer 2</label>
-            <label><input type="checkbox" name="layer3"> Layer 3</label>
-          </div>
+            <div class="base-control control-select-raster-layers">
+                <h4>Raster Layers</h4>
+                <ul class="layer-list">
+                    <li v-for="layer in layer_array">
+                        <label><input type="checkbox" :name="layer.name" :checked="layer.visible"
+                                @click="toggleRasterLayer(layer.index)"> {{layer.displayName}}</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="base-control control-select-vector-layers">
+                <h4>Vector Layers</h4>
+                <ul class="layer-list">
+                    <li v-for="layer in vector_layer_array">
+                        <label><input type="checkbox" :name="layer.name" :checked="layer.visible"
+                                @click="toggleVectorLayer(layer.index)"> {{layer.displayName}}</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="base-control leyend">
+                <h4 class="leyend-title">Leyend</h4>
+                <div v-if="vector_layer_array[0].visible">
+                    <h5 class="leyend-category">Classified samples</h5>
+                    <h5 class="leyend-attribute">Match:</h5>
+                    <ul class="leyend-list">
+                        <li class="leyend-value"><span style="color: #319c19">█</span> Yes</li>
+                        <li class="leyend-value"><span style="color: #de3b35">█</span> No</li>
+                    </ul>
+                </div>
+
+                <div v-if="layer_array[0].visible">
+                    <h5 class="leyend-category">GHS-Worldpop Differences</h5>
+                    <h5 class="leyend-attribute">GHS - Worldpop:</h5>
+                    <ul class="leyend-list">
+                        <li class="leyend-value"><span style="color: #ca0020">█</span> -10799</li>
+                        <li class="leyend-value"><span style="color: #f4a582">█</span> 89.75</li>
+                        <li class="leyend-value"><span style="color: #ffffff">█</span> 10.798</li>
+                        <li class="leyend-value"><span style="color: #bababa">█</span> 21867.25</li>
+                        <li class="leyend-value"><span style="color: #404040">█</span> 32756</li>
+                    </ul>
+                </div>
+
+                <div v-if="layer_array[1].visible || layer_array[2].visible">
+                    <h5 class="leyend-category">GHS and Worldpop</h5>
+                    <h5 class="leyend-attribute">Pop. density:</h5>
+                    <ul class="leyend-list">
+                        <li class="leyend-value"><span style="color: #404040">█</span> 0</li>
+                        <li class="leyend-value"><span style="color: #bababa">█</span> 8191.75</li>
+                        <li class="leyend-value"><span style="color: #ffffff">█</span> 16383.5</li>
+                        <li class="leyend-value"><span style="color: #f4a582">█</span> 24575.25</li>
+                        <li class="leyend-value"><span style="color: #ca0020">█</span> 32767</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="base-control data-display" v-if="featureSelected.visible">
+                <h5>{{featureSelected.feature}}</h5>
+                <h6>{{featureSelected.attribute + ": " + featureSelected.value}}</h6>
+            </div>
 
         </main><!-- End #main -->
 

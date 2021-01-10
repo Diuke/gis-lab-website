@@ -4,31 +4,80 @@
     margin-top: 81px;
 }
 
+.base-control{
+    position: absolute;
+    background: #DCDCDCdd;
+    border: 1px solid rgb(102, 102, 102);
+    border-radius: 3px;
+    padding: 10px;
+}
+
 .control-change-basemap{
-    position: fixed;
     z-index: 10;
     right: 10px;
     top: 90px;
-    background: #DCDCDCdd;
-    border: 1px solid rgb(102, 102, 102);
-    border-radius: 3px;
-    padding: 10px;
 }
 
-.control-select-layers{
-    position: fixed;
+.control-select-raster-layers{
     z-index: 9999;
     right: 10px;
     top: 300px;
-    background: #DCDCDCdd;
-    border: 1px solid rgb(102, 102, 102);
-    border-radius: 3px;
-    padding: 10px;
 }
 
-.control > label{
+.control-select-vector-layers{
+    z-index: 9999;
+    right: 10px;
+    top: 480px;
+}
+
+.leyend{
+    z-index: 9999;
+    left: 10px;
+    top: 240px;
+}
+
+.data-display{
+    z-index: 2;
+    left: 10px;
+    top: 150px;
+}
+
+.base-control > label{
     display: block;
     margin: 10px 0;
     font-size: 20px;
     font-family: "Lato", sans-serif;
+}
+
+.layer-list{
+    padding-left: 10px;
+}
+
+.layer-list > li{
+    list-style-type: none;
+}
+
+.leyend-title{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.leyend-list{
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.leyend-category{
+    font-size: 19px;
+    margin-left: 5px;
+}
+
+.leyend-attribute{
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.leyend-value{
+    font-size: 11px;
+    margin-left: 30px;
 }
