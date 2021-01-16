@@ -5,13 +5,15 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+    <base href="/gis-lab-website/">
+
     <title>GIS LAB PROJECT GROUP 5</title>
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> 
+    <link href="assets/img/favicon.ico" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
@@ -49,7 +51,7 @@
 
                 <nav class="nav-menu float-right d-none d-lg-block">
                     <ul>
-                        
+
                         <li><a href="/gis_lab/about.html">About</a></li>
                         <li><a href="/gis_lab/webgis.html">WebGIS</a></li>
                     </ul>
@@ -61,7 +63,7 @@
         <!-- ======= Hero Section ======= -->
         <section id="hero">
             <div class="hero-container">
-                <h1>Welcome to GisProject</h1>
+                <h1>GIS Project</h1>
                 <h2>This GIS Project is Developed by Group 5</h2>
                 <a href="#about" class="btn-get-started scrollto">Get Started</a>
             </div>
@@ -82,37 +84,51 @@
                             <img src="assets/img/AboutProject.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
-                            <h3>Our project includes two major steps <B>Intercomparision</B> and <B>Validation</B> of two World Population Maps.</h3>
+                            <h3>Our project includes two major steps <B>Intercomparision</B> and <B>Validation</B> of
+                                two World Population Maps.</h3>
                             <p class="font-italic">
                                 World population maps provide global information, evidence-based
-				analytics, and knowledge on human presence on the planet. The ultimate goal of these
-				maps is to ensure that every person is mapped and counted within critical operations
-				such as policy making and disasters response.
+                                analytics, and knowledge on human presence on the planet. The ultimate goal of these
+                                maps is to ensure that every person is mapped and counted within critical operations
+                                such as policy making and disasters response.
                             </p>
                             <ul>
-                                <li><i class="icofont-check-circled"></i> Data we used are the two world population maps that are GHS-Population Grid and WorldPOP-Population Counts. </li>
-                                <li><i class="icofont-check-circled"></i>GHS-Population Grid  (2015) is used and merged by the European Union.
-				        It is a raster map with CRS WGS84 and resolution of 1km for each pixel of raster.</li>
-                                <li><i class="icofont-check-circled"></i> Another map we have used is the WorldPOP-Population Count (2015). It is mnaged by various academic
-					institutions. It is also a raster layer with CRS WGS84 and resoltion of map is 1km for each pixel.</li>
-                            	<li><i class="icofont-check-circled"></i>We have intercompared and validated the portion corresponding to Pacific Ocean, part
-					of South America,Part of South Africa and Atlantic Ocean in both the Raster Maps. </li>
-				<li><i class="icofont-check-circled"></i><B>In InterComparision</B> we have compared the GHS-POP and WorlPOP maps 
-				      that have similar phenomenon such as same year of data (2015), same resoltion of pixels to access how much they are similar to each other.
-				      It helped us to know how much they are similar to each other. We dont need any external data for intercomparision.</li>
-				<li><i class="icofont-check-circled"></i><B>In Validation</B> we have validated our raster maps GHS-POP and WorldPOP by classifiying the maps
-				       based on three scenarios (1). Where GHS populated but WorldPOP not populated. (2). Where GHS not populated and WorldPOP populated.
-					(3). Where GHS and WorldPOP either both populated or both unpopulated.We have used external base maps Like Bing maps 
-					and Google Maps from Open Layer Plugin for validation and using ACaTaMa plugin for sampling the data. </li>
+                                <li><i class="icofont-check-circled"></i> Data we used are the two world population maps
+                                    that are <a href="https://ghsl.jrc.ec.europa.eu/ghs_pop.php" target="new">GHS-Population Grid</a> and <a href="https://www.worldpop.org/" target="new">WorldPOP-Population</a> Counts. </li>
+                                <li><i class="icofont-check-circled"></i>GHS-Population Grid (2015) is used and merged
+                                    by the European Union.
+                                    It is a raster map with CRS WGS84 and resolution of 1km for each pixel of raster.
+                                </li>
+                                <li><i class="icofont-check-circled"></i>WorldPOP-Population Count (2015). Is managed by various academic
+                                    institutions. It is also a raster layer with CRS WGS84 and resoltion of map is 1km
+                                    for each pixel.</li>
+                                <li><i class="icofont-check-circled"></i>We have intercompared and validated the portion
+                                    corresponding to some Pacific Ocean Islands, south part
+                                    of South America, Part of South Africa and some Atlantic Ocean Islands in both the Raster Maps.
+                                </li>
+                                <li><i class="icofont-check-circled"></i><B>In InterComparision</B> we have compared the
+                                    GHS-POP and WorlPOP maps
+                                    that have similar phenomenon such as same year of data (2015), same resoltion of
+                                    pixels to access how much they are similar to each other.
+                                    It helped us to know how much they are similar to each other. We dont need any
+                                    external data for intercomparision.</li>
+                                <li><i class="icofont-check-circled"></i><B>In Validation</B> we have validated our
+                                    raster maps GHS-POP and WorldPOP by classifiying the maps
+                                    based on three scenarios (1). Where GHS populated but WorldPOP not populated. (2).
+                                    Where GHS not populated and WorldPOP populated.
+                                    (3). Where GHS and WorldPOP either both populated or both unpopulated.We have used
+                                    external base maps Like Bing maps
+                                    and Google Maps from Open Layer Plugin for validation and using ACaTaMa plugin for
+                                    sampling the data. </li>
 
-		            </ul>
-
-					
+                            </ul>
 
 
 
 
-				
+
+
+
                         </div>
                     </div>
 
@@ -133,44 +149,62 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-6 icon-box">
                             <div class="icon"><i class="icofont-computer"></i></div>
-                            <h4 class="title"><a href="">QGIS</a></h4>
-                            <p class="description">QGIS is a free and open-source cross-platform desktop geographic 
-				information system application that supports viewing, 
-				editing, and analysis of geospatial data.</p>
+                            <h4 class="title">QGIS</h4>
+                            <p class="description">QGIS is a free and open-source cross-platform desktop geographic
+                                information system application that supports viewing,
+                                editing, and analysis of geospatial data. It also provides processing tools like <B>
+                                    GRASS GIS and GDAL </B> that were used in this
+                                project.</p>
                         </div>
                         <div class="col-lg-4 col-md-6 icon-box">
-                            <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
-                            <h4 class="title"><a href="">QGIS Processing Tool</a></h4>
-                            <p class="description">Processing tools like <B> GRASS GIS and GDAL </B> are used in this project. These
-				tools are used for geospatial data management and analysis, image processing, graphics/maps production, spatial modeling, and visualization.</p>
+                            <div class="icon"><i class="icofont-plugin"></i></div>
+                            <h4 class="title">QGIS Plugins</h4>
+                            <p class="description">We used the QGIS plugin <B>AcATaMa</B> Accuracy Assessment of
+                                Thematic Maps and <B>Quick Map
+                                    Services</B> to include satellite imagery from different basemaps - Google Satellite
+                                and Bing Satellite. We also used python for automating tasks and processing with the
+                                <B>pyQGIS</B> library.
+                            </p>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 icon-box">
+                            <div class="icon"><i class="icofont-file-javascript"></i></div>
+                            <h4 class="title">Vue.js</h4>
+                            <p class="description">Vue is a progressive framework for building user interfaces. The core
+                                library is focused on the view layer only, and is easy to
+                                pick up and integrate with other libraries or existing projects. We used it to provide
+                                awesome interactivity to the WebGIS map!</p>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 icon-box">
+                            <div class="icon"><i class="icofont-image"></i></div>
+                            <h4 class="title">Open Layers</h4>
+                            <p class="description">OpenLayers is an open-source JavaScript library for displaying map
+                                data in web browsers as slippy maps.
+                                It provides an API for building rich web-based geographic applications similar to Google
+                                Maps and Bing Maps</p>
                         </div>
                         <div class="col-lg-4 col-md-6 icon-box">
                             <div class="icon"><i class="icofont-earth"></i></div>
-                            <h4 class="title"><a href="">QGIS Plugin</a></h4>
-                            <p class="description">We have majorly used plugins like <B>AcATaMa and Quick Map Services.</B> Core and external plugins QGIS 
-				plugins are implemented either as Core Plugins or External Plugins.</p>
+                            <h4 class="title">GeoServer</h4>
+                            <p class="description">
+                                GeoServer is an open source software server written in Java that allows users to share
+                                and edit geospatial data.
+                                Designed for interoperability, it publishes data from any major spatial data source
+                                using open standards.
+                            </p>
                         </div>
                         <div class="col-lg-4 col-md-6 icon-box">
-                            <div class="icon"><i class="icofont-image"></i></div>
-                            <h4 class="title"><a href="">Open Layers</a></h4>
-                            <p class="description">OpenLayers is an open-source JavaScript library for displaying map data in web browsers as slippy maps. 
-				It provides an API for building rich web-based geographic applications similar to Google Maps and Bing Maps</p>
+                            <div class="icon"><i class="icofont-cloudapp"></i></div>
+                            <h4 class="title">AWS</h4>
+                            <p class="description">
+                                AWS (Amazon Web Services) is a secured cloud services platform that offers computing
+                                power, database storage, content delivery and various other functionalities.
+                                We used AWS S3 to host this website and an EC2 instance to host Geoserver!
+                            </p>
                         </div>
-                        <div class="col-lg-4 col-md-6 icon-box">
-                            <div class="icon"><i class="icofont-settings"></i></div>
-                            <h4 class="title"><a href="">Amazon GeoServer</a></h4>
-                            <p class="description">GeoServer is an open source software server written in Java that allows users to share and edit geospatial data. 
-				Designed for interoperability, it publishes data from any major spatial data source using open standards.</p>
-                        <!--</div>
-                        <div class="col-lg-4 col-md-6 icon-box">
-                            <div class="icon"><i class="icofont-tasks-alt"></i></div>
-                            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-                            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                tempore, cum soluta nobis est eligendi</p>
-                        </div> -->
-                    </div>
 
-                </div>
+                    </div>
             </section><!-- End Services Section -->
 
             <!-- ======= Call To Action Section ======= -->
@@ -186,7 +220,8 @@
                     </div>
 
                 </div>
-            </section> --> <!-- End Call To Action Section -->
+            </section> -->
+            <!-- End Call To Action Section -->
 
             <!-- ======= Our Portfolio Section ======= -->
             <section id="portfolio" class="portfolio">
@@ -209,7 +244,7 @@
 
                     <div class="row portfolio-container">
 
-                        
+
 
                         <div class="col-lg-4 col-md-6 filter-InterComparisionLayers">
                             <div class="portfolio-item">
@@ -223,49 +258,56 @@
                             </div>
                         </div>
 
-			<div class="col-lg-4 col-md-6 filter-InterComparisionLayers">
+                        <div class="col-lg-4 col-md-6 filter-InterComparisionLayers">
                             <div class="portfolio-item">
                                 <img src="assets/img/portfolio/Worlpop_intercomp.png" class="img-fluid" alt="">
                                 <div class="portfolio-info">
-                                    <h3><a href="assets/img/portfolio/Worlpop_intercomp.png" data-gall="portfolioGallery"
-                                            class="venobox" title="WorldPOP Intercomparision">WorldPOP Intercomparision</a></h3>
+                                    <h3><a href="assets/img/portfolio/Worlpop_intercomp.png"
+                                            data-gall="portfolioGallery" class="venobox"
+                                            title="WorldPOP Intercomparision">WorldPOP Intercomparision</a></h3>
                                     <a href="assets/img/portfolio/Worlpop_intercomp.png" data-gall="portfolioGallery"
-                                        class="venobox" title="WorldPOP Intercomparision"><i class="icofont-plus"></i></a>
+                                        class="venobox" title="WorldPOP Intercomparision"><i
+                                            class="icofont-plus"></i></a>
                                 </div>
                             </div>
                         </div>
 
-			<div class="col-lg-4 col-md-6 filter-InterComparisionLayers">
+                        <div class="col-lg-4 col-md-6 filter-InterComparisionLayers">
                             <div class="portfolio-item">
                                 <img src="assets/img/portfolio/Intercomp_Diff.png" class="img-fluid" alt="">
                                 <div class="portfolio-info">
                                     <h3><a href="assets/img/portfolio/Intercomp_Diff.png" data-gall="portfolioGallery"
-                                            class="venobox" title="GHS-WORLDPOP Intercomparision">GHS-WORLDPOP Intercomparision</a></h3>
+                                            class="venobox" title="GHS-WORLDPOP Intercomparision">GHS-WORLDPOP
+                                            Intercomparision</a></h3>
                                     <a href="assets/img/portfolio/Intercomp_Diff.png" data-gall="portfolioGallery"
-                                        class="venobox" title="GHS-WORLDPOP Intercomparision"><i class="icofont-plus"></i></a>
+                                        class="venobox" title="GHS-WORLDPOP Intercomparision"><i
+                                            class="icofont-plus"></i></a>
                                 </div>
                             </div>
                         </div>
-				
 
-			<div class="col-lg-4 col-md-6 filter-ValidationLayers">
+
+                        <div class="col-lg-4 col-md-6 filter-ValidationLayers">
                             <div class="portfolio-item">
                                 <img src="assets/img/portfolio/Worlpop_Reclassify_int.png" class="img-fluid" alt="">
                                 <div class="portfolio-info">
-                                    <h3><a href="assets/img/portfolio/Worlpop_Reclassify_int.png" data-gall="portfolioGallery"
-                                            class="venobox" title="Worldpop Reclassify">Worldpop Reclassify</a></h3>
-                                    <a href="assets/img/portfolio/Worlpop_Reclassify_int.png" data-gall="portfolioGallery"
-                                        class="venobox" title="Worldpop Reclassify"><i class="icofont-plus"></i></a>
+                                    <h3><a href="assets/img/portfolio/Worlpop_Reclassify_int.png"
+                                            data-gall="portfolioGallery" class="venobox"
+                                            title="Worldpop Reclassify">Worldpop Reclassify</a></h3>
+                                    <a href="assets/img/portfolio/Worlpop_Reclassify_int.png"
+                                        data-gall="portfolioGallery" class="venobox" title="Worldpop Reclassify"><i
+                                            class="icofont-plus"></i></a>
                                 </div>
                             </div>
                         </div>
 
-			<div class="col-lg-4 col-md-6 filter-ValidationLayers">
+                        <div class="col-lg-4 col-md-6 filter-ValidationLayers">
                             <div class="portfolio-item">
                                 <img src="assets/img/portfolio/GHS-reclassify_int.png" class="img-fluid" alt="">
                                 <div class="portfolio-info">
-                                    <h3><a href="assets/img/portfolio/GHS-reclassify_int.png" data-gall="portfolioGallery"
-                                            class="venobox" title="GHS Reclassify">GHS Reclassify</a></h3>
+                                    <h3><a href="assets/img/portfolio/GHS-reclassify_int.png"
+                                            data-gall="portfolioGallery" class="venobox" title="GHS Reclassify">GHS
+                                            Reclassify</a></h3>
                                     <a href="assets/img/portfolio/GHS-reclassify_int.png" data-gall="portfolioGallery"
                                         class="venobox" title="GHS Reclassify"><i class="icofont-plus"></i></a>
                                 </div>
@@ -276,10 +318,12 @@
                             <div class="portfolio-item">
                                 <img src="assets/img/portfolio/3-Different-Scenarios.png" class="img-fluid" alt="">
                                 <div class="portfolio-info">
-                                    <h3><a href="assets/img/portfolio/3-Different-Scenarios.png" data-gall="portfolioGallery"
-                                            class="venobox" title="Different Scenarios Layer">Different Scenarios Layer</a></h3>
-                                    <a href="assets/img/portfolio/3-Different-Scenarios.png" data-gall="portfolioGallery"
-                                        class="venobox" title="Different Scenarios Layer"><i class="icofont-plus"></i></a>
+                                    <h3><a href="assets/img/portfolio/3-Different-Scenarios.png"
+                                            data-gall="portfolioGallery" class="venobox"
+                                            title="Different Scenarios Layer">Different Scenarios Layer</a></h3>
+                                    <a href="assets/img/portfolio/3-Different-Scenarios.png"
+                                        data-gall="portfolioGallery" class="venobox"
+                                        title="Different Scenarios Layer"><i class="icofont-plus"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -295,66 +339,6 @@
                                 </div>
                             </div>
                         </div>
-<!--
-                        <div class="col-lg-4 col-md-6 filter-ValidationLayers">
-                            <div class="portfolio-item">
-                                <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h3><a href="assets/img/portfolio/" data-gall="portfolioGallery"
-                                            class="venobox" title="Web 2">Web 2</a></h3>
-                                    <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery"
-                                        class="venobox" title="Web 2"><i class="icofont-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 filter-ValidationLayers">
-                            <div class="portfolio-item">
-                                <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h3><a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery"
-                                            class="venobox" title="App 3">App 3</a></h3>
-                                    <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery"
-                                        class="venobox" title="App 3"><i class="icofont-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 filter-ValidationLayers">
-                            <div class="portfolio-item">
-                                <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h3><a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery"
-                                            class="venobox" title="Card 1">Card 1</a></h3>
-                                    <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery"
-                                        class="venobox" title="Card 1"><i class="icofont-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 filter-ValidationLayers">
-                            <div class="portfolio-item">
-                                <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h3><a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery"
-                                            class="venobox" title="Card 3">Card 3</a></h3>
-                                    <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery"
-                                        class="venobox" title="Card 3"><i class="icofont-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 filter-ValidationLayers">
-                            <div class="portfolio-item">
-                                <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h3><a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery"
-                                            class="venobox" title="Web 1">Web 1</a></h3>
-                                    <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery"
-                                        class="venobox" title="Web 1"><i class="icofont-plus"></i></a>
-                                </div>
-                            </div>
-                        </div> -->
 
                     </div>
 
@@ -372,40 +356,48 @@
                     <ul class="faq-list">
 
                         <li>
-                            <a data-toggle="collapse" class="" href="#faq1"> Processing of the system slow down.<i class="icofont-simple-up"></i></a>
+                            <a data-toggle="collapse" class="" href="#faq1"> Processing of the system slow down.<i
+                                    class="icofont-simple-up"></i></a>
                             <div id="faq1" class="collapse show" data-parent=".faq-list">
                                 <p>
-                                    As the Worldpop-PopulationCount data was very big the Qgis tool slow down and thats why each processing was taking time to process.
+                                    As the Worldpop-PopulationCount data was very big the Qgis tool slow down and thats
+                                    why each processing was taking time to process.
                                 </p>
                             </div>
                         </li>
 
                         <li>
-                            <a data-toggle="collapse" href="#faq2" class="collapsed">New to the QGIS Framework<i class="icofont-simple-up"></i></a>
+                            <a data-toggle="collapse" href="#faq2" class="collapsed">New to the QGIS Framework<i
+                                    class="icofont-simple-up"></i></a>
                             <div id="faq2" class="collapse" data-parent=".faq-list">
                                 <p>
-                                    It was a new exposure for our group to the QGIS tool, at some steps it took additional efforts to learn about the specific Plugin
-				    or Processing tool.
+                                    It was a new exposure for our group to the QGIS tool, at some steps it took
+                                    additional efforts to learn about the specific Plugin
+                                    or Processing tool.
                                 </p>
                             </div>
                         </li>
 
                         <li>
-                            <a data-toggle="collapse" href="#faq3" class="collapsed">Handling of Data Type for each Layer.<i class="icofont-simple-up"></i></a>
+                            <a data-toggle="collapse" href="#faq3" class="collapsed">Handling of Data Type for each
+                                Layer.<i class="icofont-simple-up"></i></a>
                             <div id="faq3" class="collapse" data-parent=".faq-list">
                                 <p>
-                                   We need to have the integer data type for each layer but due to the use of raster calculator each time we have to be carefully
-				   convert each layer to integer data type. 
+                                    We need to have the integer data type for each layer but due to the use of raster
+                                    calculator each time we have to be carefully
+                                    convert each layer to integer data type.
                                 </p>
                             </div>
                         </li>
 
                         <li>
-                            <a data-toggle="collapse" href="#faq4" class="collapsed">Handling Null Values for each layers.<i class="icofont-simple-up"></i></a>
+                            <a data-toggle="collapse" href="#faq4" class="collapsed">Handling Null Values for each
+                                layers.<i class="icofont-simple-up"></i></a>
                             <div id="faq4" class="collapse" data-parent=".faq-list">
                                 <p>
-                                    We have to align the Null values for different layers for intercomparison. After each conversion of data type 
-				    and processing of layer we have to check the null values carefuly.
+                                    We have to align the Null values for different layers for intercomparison. After
+                                    each conversion of data type
+                                    and processing of layer we have to check the null values carefuly.
                                 </p>
                             </div>
                         </li>
@@ -420,7 +412,7 @@
 
                     <div class="section-title">
                         <h2>Our Group</h2>
-                       <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.
+                        <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.
                             Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit
                             alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
                     </div>
@@ -429,9 +421,9 @@
                         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                             <div class="member">
                                 <img src="assets/img/team/Juan.jpg" alt="">
-                                <h4>DUQUE ORDOÑEZ JUAN PABLO</h4>
+                                <h4>Juan Pablo Duque Ordoñez </h4>
                                 <span>Student</span>
-                               <!-- <p>
+                                <!-- <p>
                                     Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis
                                     quaerat qui aut aut aut
                                 </p> -->
@@ -447,9 +439,9 @@
                         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                             <div class="member">
                                 <img src="assets/img/team/Nashwan.jpg" alt="">
-                                <h4>KHAIRALLA NSHWAN</h4>
+                                <h4>Khairalla Nshwan</h4>
                                 <span>Student</span>
-                             <!-- <p>
+                                <!-- <p>
                                     Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto
                                     rerum rerum temporibus
                                 </p> -->
@@ -467,7 +459,7 @@
                                 <img src="assets/img/team/Priyansh.jpg" alt="">
                                 <h4>Kumar Priyansh</h4>
                                 <span>Student</span>
-                              <!--  <p>
+                                <!--  <p>
                                     Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et
                                     laborum toro des clara
                                 </p> -->
@@ -485,99 +477,7 @@
                 </div>
             </section><!-- End Our Team Section -->
 
-          <!-- ======= Contact Us Section ======= -->
-            <!-- <section id="contact" class="contact section-bg">
-                <div class="container">
 
-                    <div class="section-title">
-                        <h2>Contact Us</h2>
-                        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.
-                            Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit
-                            alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="contact-about">
-                                <h3>Amoeba</h3>
-                                <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam
-                                    phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat
-                                    mauris nunc congue.</p>
-                                <div class="social-links">
-                                    <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-                                    <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-                                    <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-                                    <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6">
-                            <div class="info">
-                                <div>
-                                    <i class="icofont-google-map"></i>
-                                    <p>A108 Adam Street<br>New York, NY 535022</p>
-                                </div>
-
-                                <div>
-                                    <i class="icofont-envelope"></i>
-                                    <p>info@example.com</p>
-                                </div>
-
-                                <div>
-                                    <i class="icofont-phone"></i>
-                                    <p>+1 5589 55488 55s</p>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="col-lg-5 col-md-12">
-                            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                                <div class="form-group">
-                                    <input type="text" name="name" class="form-control" id="name"
-                                        placeholder="Your Name" data-rule="minlen:4"
-                                        data-msg="Please enter at least 4 chars" />
-                                    <div class="validate"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" name="email" id="email"
-                                        placeholder="Your Email" data-rule="email"
-                                        data-msg="Please enter a valid email" />
-                                    <div class="validate"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="subject" id="subject"
-                                        placeholder="Subject" data-rule="minlen:4"
-                                        data-msg="Please enter at least 8 chars of subject" />
-                                    <div class="validate"></div>
-                                </div>
-                                <div class="form-group">
-                                    <textarea class="form-control" name="message" rows="5" data-rule="required"
-                                        data-msg="Please write something for us" placeholder="Message"></textarea>
-                                    <div class="validate"></div>
-                                </div>
-                                <div class="mb-3">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                                </div>
-                                <div class="text-center"><button type="submit">Send Message</button></div>
-                            </form>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section> --> <!-- End Contact Us Section --> 
-
-            <!-- ======= Map Section ======= -->
-           <!-- <section class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2s150%20Park%20Row%2C%20New%20York%2C%20NY%2010007%2C%20USA!5e0!3m2!1sen!2sbg!4v1579767901424!5m2!1sen!2sbg"
-                    frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            </section> --> <!-- End Map Section -->
 
         </main><!-- End #main -->
 

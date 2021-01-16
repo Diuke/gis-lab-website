@@ -4,6 +4,10 @@
     margin-top: 81px;
 }
 
+ul{
+    margin-bottom: 0;
+}
+
 .base-control{
     position: absolute;
     background: #DCDCDCdd;
@@ -27,19 +31,31 @@
 .control-select-vector-layers{
     z-index: 9999;
     right: 10px;
-    top: 480px;
+    top: 465px;
 }
 
 .leyend{
     z-index: 9999;
     left: 10px;
     top: 240px;
+
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 10px;
 }
 
 .data-display{
     z-index: 2;
     left: 10px;
     top: 150px;
+}
+
+.more-info{
+    z-index: 2;
+    left: 10px;
+    bottom: 20px;
+    background: rgb(54, 46, 92);
+    color: white;
 }
 
 .base-control > label{
@@ -67,17 +83,33 @@
     padding-left: 20px;
 }
 
+.leyend-section{
+    font-size: 18px;
+    margin: 10px 0 0 0;
+    font-weight: bold;
+}
+
 .leyend-category{
-    font-size: 19px;
-    margin-left: 5px;
+    font-size: 15px;
+    margin: 10px 0 0 5px;
 }
 
 .leyend-attribute{
-    font-size: 14px;
+    font-size: 12px;
     margin-left: 20px;
 }
 
 .leyend-value{
-    font-size: 11px;
+    font-size: 10px;
     margin-left: 30px;
+}
+
+.tile-display{
+    z-index: 2;
+    right: 138px;
+    top: 218px;
+}
+
+.no-margin{
+    margin: 0;
 }
