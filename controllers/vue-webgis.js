@@ -144,7 +144,6 @@ let controls = ol.control.defaults({
 var app = new Vue({
     el: '#app',
     data: {
-        message: 'GISLAB',
         target: "map",
         map: {},
         basemap_layer: {},

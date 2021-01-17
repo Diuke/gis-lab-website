@@ -44,16 +44,16 @@
             <div class="container">
 
                 <div class="logo float-left">
-                    <h1 class="text-light"><a href="/gis_lab"><span>{{message}}</span></a></h1>
+                    <h1 class="text-light"><a href="index.html"><span>GISLAB</span></a></h1>
                     <!-- Uncomment below if you prefer to use an image logo -->
                     <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
                 </div>
 
                 <nav class="nav-menu float-right d-none d-lg-block">
                     <ul>
-
-                        <li><a href="/gis_lab/about.html">About</a></li>
-                        <li><a href="/gis_lab/webgis.html">WebGIS</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="about.html">About</a></li>
+                        <li><a href="webgis.html">WebGIS</a></li>
                     </ul>
                 </nav><!-- .nav-menu -->
 
@@ -63,9 +63,9 @@
         <!-- ======= Hero Section ======= -->
         <section id="hero">
             <div class="hero-container">
-                <h1>GIS Project</h1>
-                <h2>This GIS Project is Developed by Group 5</h2>
-                <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                <h1>GIS LAB</h1>
+                <h2>About the project, Implementation and Results Discussion</h2>
+                <a href="webgis.html" class="btn-get-started scrollto">Open WebGIS</a>
             </div>
         </section><!-- #hero -->
 
@@ -84,7 +84,7 @@
                             <img src="assets/img/AboutProject.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
-                            <h3>Our project includes two major steps <B>Intercomparision</B> and <B>Validation</B> of
+                            <h3>This project is about <B>Intercomparision</B> and <B>Validation</B> of
                                 two World Population Maps.</h3>
                             <p class="font-italic">
                                 World population maps provide global information, evidence-based
@@ -93,42 +93,88 @@
                                 such as policy making and disasters response.
                             </p>
                             <ul>
-                                <li><i class="icofont-check-circled"></i> Data we used are the two world population maps
-                                    that are <a href="https://ghsl.jrc.ec.europa.eu/ghs_pop.php" target="new">GHS-Population Grid</a> and <a href="https://www.worldpop.org/" target="new">WorldPOP-Population</a> Counts. </li>
-                                <li><i class="icofont-check-circled"></i>GHS-Population Grid (2015) is used and merged
+                                <li><i class="icofont-check-circled"></i> We used the data from two world population
+                                    raster
+                                    maps that are worldwide used: <a href="https://ghsl.jrc.ec.europa.eu/ghs_pop.php"
+                                        target="new">GHS-Population Grid</a> and <a
+                                        href="https://www.worldpop.org/project/categories?id=3"
+                                        target="new">WorldPOP-Population Counts.</a></li>
+                                <li><i class="icofont-check-circled"></i><b>GHS-Population Grid</b> (2015) is used and
+                                    maintained
                                     by the European Union.
-                                    It is a raster map with CRS WGS84 and resolution of 1km for each pixel of raster.
+                                    It is a raster map with CRS WGS84 and resolution of 1km for each pixel of
+                                    raster.<br>
+                                    This spatial raster dataset depicts the distribution of population, expressed as the
+                                    number of people per cell.
                                 </li>
-                                <li><i class="icofont-check-circled"></i>WorldPOP-Population Count (2015). Is managed by various academic
-                                    institutions. It is also a raster layer with CRS WGS84 and resoltion of map is 1km
-                                    for each pixel.</li>
-                                <li><i class="icofont-check-circled"></i>We have intercompared and validated the portion
-                                    corresponding to some Pacific Ocean Islands, south part
-                                    of South America, Part of South Africa and some Atlantic Ocean Islands in both the Raster Maps.
+                                <li><i class="icofont-check-circled"></i><b>WorldPOP-Population Count</b> (2015). Is
+                                    managed by
+                                    various academic
+                                    institutions. It is a raster layer with CRS WGS84 and resolution of 1km
+                                    for each pixel. <br>
+                                    This dataset tells the population density per each pixel.
                                 </li>
-                                <li><i class="icofont-check-circled"></i><B>In InterComparision</B> we have compared the
-                                    GHS-POP and WorlPOP maps
-                                    that have similar phenomenon such as same year of data (2015), same resoltion of
-                                    pixels to access how much they are similar to each other.
-                                    It helped us to know how much they are similar to each other. We dont need any
-                                    external data for intercomparision.</li>
-                                <li><i class="icofont-check-circled"></i><B>In Validation</B> we have validated our
-                                    raster maps GHS-POP and WorldPOP by classifiying the maps
-                                    based on three scenarios (1). Where GHS populated but WorldPOP not populated. (2).
-                                    Where GHS not populated and WorldPOP populated.
-                                    (3). Where GHS and WorldPOP either both populated or both unpopulated.We have used
-                                    external base maps Like Bing maps
-                                    and Google Maps from Open Layer Plugin for validation and using ACaTaMa plugin for
-                                    sampling the data. </li>
+                                <li><i class="icofont-check-circled"></i>Our group was in charge of intercomparing and
+                                    validate the portion of the GHS-POP tiles
+                                    corresponding to some <b>Pacific Ocean Islands</b>, the southern-most part
+                                    of <b>South America</b>, Part of <b>South Africa</b> and some <b>Atlantic Ocean
+                                        Islands</b> for both of the
+                                    Raster Maps.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row pt-5">
+                        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+                            <ul>
+                                <li><i class="icofont-check-circled"></i><B>INTERCOMPARISON:</B><br>
+                                    <p style="text-align: justify; margin-top: 10px;">
+                                        Intercomparison is a comparison of two distinct datasets to assess to which
+                                        extent two of them share the same information.<br>
+                                        To make intercomparison, the maps must have the same extent, resolution, pixel
+                                        classes or variable, and CRS.<br>
+                                        For our project we compared the GHS-POP and WorlPOP datasets, that share the
+                                        same variable (population density),
+                                        are from the same year (2015), and share the same pixel resolution (1km). <br>
+                                        We had to align them to perform the intercomparison so they both shared the same
+                                        extent.<br>
+
+                                        For intercomparison no external data is necessary.
+                                    </p>
+                                </li>
 
                             </ul>
+                        </div>
+                        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+                            <ul>
+                                <li><i class="icofont-check-circled"></i><B>VALIDATION:</B> <br>
+                                    <p>
+                                        Validation is a comparison of a map with a reference dataset with the aim to
+                                        determine map accuracy.<br>
+                                        Typically, reference data are collected in a field (on-site)
+                                        survey or in photo-interpretation of very-high-resolution satellite imagery or
+                                        orthophoto.<br>
 
 
+                                    </p>
+                                    We validated our raster maps GHS-POP and WorldPOP by creating a reference dataset
+                                    based on three scenarios: <br>
+                                    0 = GHS not populated but WorldPOP populated. <br>
+                                    1 = GHS and WorldPOP either both populated or both unpopulated. <br>
+                                    2 = GHS populated and WorldPOP not populated. <br>
 
+                                    We used Bing maps
+                                    and Google Maps as high resolution satellite maps for photo-classification,
+                                    and the QGIS ACaTaMa plugin for
+                                    sampling the data and classifying the reference dataset as populated or not
+                                    populated taking as criteria if there was at least one house on the raster cell.<br>
+                                    Finally, we used a python script that
+                                    performed the accuracy and error matrix calculation for both GHS-POP and WorldPOP
+                                    maps.
+                                </li>
 
-
-
-
+                            </ul>
                         </div>
                     </div>
 
@@ -207,28 +253,322 @@
                     </div>
             </section><!-- End Services Section -->
 
-            <!-- ======= Call To Action Section ======= -->
-            <!-- <section class="call-to-action">
-                <div class="container">
-
-                    <div class="text-center">
-                        <h3>Call To Action</h3>
-                        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.</p>
-                        <a class="cta-btn" href="#">Call To Action</a>
-                    </div>
-
-                </div>
-            </section> -->
-            <!-- End Call To Action Section -->
-
-            <!-- ======= Our Portfolio Section ======= -->
-            <section id="portfolio" class="portfolio">
+            <!-- ======= About Us Section ======= -->
+            <section id="results" class="about">
                 <div class="container">
 
                     <div class="section-title">
-                        <h2>Our Portfolio</h2>
+                        <h2>Results Discussion </h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <ul>
+                                <li>
+                                    <h3><b>Tile extent:</b></h3>
+                                    <p class="font-italic">
+                                        Before droping to the results section, let us specify the working space.
+                                    </p>
+                                    <p>
+                                        Our group was in charge of the GHS-POP tiles depicted in the picture below. All the tiles are squared but are distorted in the image due to the projection.
+                                    </p>
+                                    <div class="text-center">
+                                        <img src="assets/img/layers/tile-extent.png" style="width: 100%;">
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                            <h3 class="pt-5"><b>Intercomparison Results</b></h3>
+                            <p class="font-italic">
+                                Output and statistics of the intercomparison step.
+                            </p>
+                            <ul>
+                                <li>
+                                    <i class="icofont-check-circled"></i> <b>Output:</b>
+                                    <p>
+                                        In the intercomparison step we generated three rasters: the GHS-POP and WorldPOP
+                                        aligned and clipped to
+                                        the extent of our tiles, and a raster with the difference of them — GHS-POP
+                                        subtracted WorldPOP.
+                                        <br>
+                                        All three layers can be seen on the <a target="new"
+                                            href="webgis.html">WebGIS.</a>
+                                    </p>
+                                </li>
+
+                                <li class="pt-3">
+                                    <i class="icofont-check-circled"></i> <b>Statistics:</b>
+                                    <p>
+                                        We calculated univariate statistics for the differences raster using <b>GRASS
+                                        r.univar</b> function and correlation values
+                                        between GHS-POP and WorldPOP rasters using <b>GRASS r.covar</b> function.<br>
+                                        Correlation values were calculated for the complete raster, and for each one of
+                                        the tiles, i.e. correlation of both rasters clipped in single tile.
+                                        <br><br>
+                                    </p>
+
+                                    <h4>Univariate statistics for differences raster:</h4>
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Minimum value</th>
+                                                <td>-9508</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Maximum value</th>
+                                                <td>26809</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Mean</th>
+                                                <td>0.12915</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Mean of absolute value</th>
+                                                <td>8.63721</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Standard deviation</th>
+                                                <td>100.37941</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Variance</th>
+                                                <td>10076.02701</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Coefficient of variation</th>
+                                                <td>77718.45163</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <p>
+                                        From the table we concluded that as the mean is very close to zero both rasters are very similar, but there are very big differences – probably outliers –  
+                                        as we can see values very far from zero as the minimum and maximum values. The variance and standard deviation are also big, probably due to those values.<br>
+                                        A high variance indicates that the data points are very spread out from the mean, and from one another. 
+                                    </p>
+
+                                    <h4 class="pt-5">Correlation of GHS-POP and WorldPOP:</h4>
+                                    <p>
+                                        Correlation of complete rasters:
+                                    </p>
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Number of elements compared (N)</th>
+                                                <td>6793854</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Correlation</th>
+                                                <td>0.921150</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>
+                                        High correlation close to 1, that is the maximum value. <br>
+                                    </p>
+                                    <p>
+                                        However, looking at the correlation at each tile we find:
+                                    </p>
+                                    <table class="table">
+                                        <tbody>
+                                            <thead>
+                                                <tr>
+                                                  <th scope="col">Tile ID</th>
+                                                  <th scope="col">Number of pixels</th>
+                                                  <th scope="col">Correlation</th>
+                                                </tr>
+                                              </thead>
+                                            <tr>
+                                                <td>360</td>
+                                                <td>3203</td>
+                                                <td>0.702968</td>
+                                            </tr>
+                                            <tr>
+                                                <td>361</td>
+                                                <td>402</td>
+                                                <td>0.466458</td>
+                                            </tr>
+                                            <tr>
+                                                <td>362</td>
+                                                <td>1428</td>
+                                                <td>0.560282</td>
+                                            </tr>
+                                            <tr>
+                                                <td>363</td>
+                                                <td>3921</td>
+                                                <td>0.652339968</td>
+                                            </tr>
+                                            <tr>
+                                                <td>364</td>
+                                                <td>1046</td>
+                                                <td>0.287324</td>
+                                            </tr>
+                                            <tr>
+                                                <td>365</td>
+                                                <td>93</td>
+                                                <td>0.846598</td>
+                                            </tr>
+                                            <tr>
+                                                <td>396</td>
+                                                <td>91</td>
+                                                <td>1*</td>
+                                            </tr>
+                                            <tr>
+                                                <td>399</td>
+                                                <td>109</td>
+                                                <td>0.815887</td>
+                                            </tr>
+                                            <tr>
+                                                <td>403</td>
+                                                <td>280</td>
+                                                <td>0.230698</td>
+                                            </tr>
+                                            <tr>
+                                                <td>405</td>
+                                                <td>103</td>
+                                                <td>0.724119</td>
+                                            </tr>
+                                            <tr>
+                                                <td>406</td>
+                                                <td>232623</td>
+                                                <td>0.87358</td>
+                                            </tr>
+                                            <tr>
+                                                <td>407</td>
+                                                <td>1440000</td>
+                                                <td>0.899744</td>
+                                            </tr>
+                                            <tr>
+                                                <td>408</td>
+                                                <td>1107705</td>
+                                                <td>0.966433</td>
+                                            </tr>
+                                            <tr>
+                                                <td>409</td>
+                                                <td>52519</td>
+                                                <td>0.979717</td>
+                                            </tr>
+                                            <tr>
+                                                <td>415</td>
+                                                <td>336583</td>
+                                                <td>0.983315</td>
+                                            </tr>
+                                            <tr>
+                                                <td>416</td>
+                                                <td>1046786</td>
+                                                <td>0.878862</td>
+                                            </tr>
+                                            <tr>
+                                                <td>417</td>
+                                                <td>127207</td>
+                                                <td>0.944359</td>
+                                            </tr>
+                                            <tr>
+                                                <td>432</td>
+                                                <td>1896</td>
+                                                <td>0.811647</td>
+                                            </tr>
+                                            <tr>
+                                                <td>442</td>
+                                                <td>529726</td>
+                                                <td>0.817072</td>
+                                            </tr>
+                                            <tr>
+                                                <td>443</td>
+                                                <td>948809</td>
+                                                <td>0.899297</td>
+                                            </tr>
+                                            <tr>
+                                                <td>444</td>
+                                                <td>91461</td>
+                                                <td>0.949971</td>
+                                            </tr>
+                                            <tr>
+                                                <td>448</td>
+                                                <td>238</td>
+                                                <td>0.873545</td>
+                                            </tr>
+                                            <tr>
+                                                <td>449</td>
+                                                <td>141</td>
+                                                <td>1*</td>
+                                            </tr>
+                                            <tr>
+                                                <td>478</td>
+                                                <td>526346</td>
+                                                <td>0.6931</td>
+                                            </tr>
+                                            <tr>
+                                                <td>479</td>
+                                                <td>320505</td>
+                                                <td>0.825784</td>
+                                            </tr>
+                                            <tr>
+                                                <td>480</td>
+                                                <td>19973</td>
+                                                <td>0.516338</td>
+                                            </tr>
+                                            <tr>
+                                                <td>489</td>
+                                                <td>677</td>
+                                                <td>1*</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>
+                                        <b>* Calculated correlation of NULL due to all of the raster values being 0 in both rasters, which in practice is correlation of 1.</b>
+                                    </p>
+                                    <p>
+                                        Correlation values on each tile can be seen in the <a href="webgis.html" target="new">WebGIS</a> by clicking on each tile.<br><br>
+
+                                        We can consider 2 kind of tiles: Tiles containing the small islands that have very few amount of data (always less than 4000), and tiles containing the mainland and big islands (Falkland Islands) that have a lot of data available.
+                                        The correlation in small islands tiles is very variable, ranging from <b>0.230698</b> to <b>0.873545</b>. Values of 1 are left aside because the islands in those tiles are inhabited and both datasets properly label all pixels as 0.<br>
+                                        The variability in correlation may be explained by the little amount of data, making it very succeptible to outliers.<br><br>
+
+                                        On the other side, the mainland and big islands tiles are generally more robust, ranging from <b>0.516338</b> to <b>0.983315</b>, always above <b>0.5</b>.<br>
+                                        The low value <b>0.516338</b> corresponds to half of the Falkland islands, and is the tile with less data of the mainland and big islands tiles with 19973 pixels.
+                                        The second lower value is <b>0.6931</b> and corresponds to the mainly inhabited area of Magallanes province in Chile and half of the Argentinian Patagonia. This places have very low population density and, specially the Magallanes province, is very geographically complex. Outliers in the calculation of the values could lead to the low correlation value.<br>
+                                        Aside from those values, all correlation values in mainland and big island tiles exceed <b>0.8</b>.
+                                    </p>
+                                </li>
+
+                            </ul>
+
+                            
+                            <h3 class="pt-5"><b>Validation Results</b></h3>
+                            <p class="font-italic">
+                                Output and statistics of the validation step.
+                            </p>
+                            <ul>
+                                <li>
+                                    <i class="icofont-check-circled"></i> <b>Output:</b>
+                                    <p>
+                                        In the validation step we generated three rasters: the GHS-POP and WorldPOP classified to <b>populated</b> or <b>not populated</b> using the rasters previously processed in the intercomparison, and 
+                                        a raster calculating the differences between the classification rasters, with the following values: <br>
+                                        <b>0</b> = GHS not populated but WorldPOP populated.<br>
+                                        <b>1</b> = GHS and WorldPOP either both populated or both unpopulated.<br>
+                                        <b>2</b> = GHS populated and WorldPOP not populated.<br><br>
+                                        
+                                        Also, we generated <b>600</b> sampling points with the QGIS AcATaMa plugin that were classified using satellite imagery from Bing Satellite and Google Satellite and used as the reference for the validation.<br><br>
+                                        All layers can be seen on the <a target="new" href="webgis.html">WebGIS.</a>
+                                    </p>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </section><!-- End About Us Section -->
+
+            <!-- ======= Our Portfolio Section ======= -->
+            <section id="portfolio" class="portfolio section-bg">
+                <div class="container">
+
+                    <div class="section-title">
+                        <h2>Layers Screenshots</h2>
                     </div>
 
                     <div class="row">
@@ -346,7 +686,7 @@
             </section><!-- End Our Portfolio Section -->
 
             <!-- ======= Frequently Asked Questions Section ======= -->
-            <section id="faq" class="faq section-bg">
+            <section id="faq" class="faq ">
                 <div class="container">
 
                     <div class="section-title">
@@ -407,7 +747,7 @@
             </section><!-- End Frequently Asked Questions Section -->
 
             <!-- ======= Our Team Section ======= -->
-            <section id="team" class="team">
+            <section id="team" class="team section-bg">
                 <div class="container">
 
                     <div class="section-title">
@@ -422,17 +762,10 @@
                             <div class="member">
                                 <img src="assets/img/team/Juan.jpg" alt="">
                                 <h4>Juan Pablo Duque Ordoñez </h4>
-                                <span>Student</span>
-                                <!-- <p>
-                                    Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis
-                                    quaerat qui aut aut aut
-                                </p> -->
-                                <div class="social">
-                                    <a href=""><i class="icofont-twitter"></i></a>
-                                    <a href=""><i class="icofont-facebook"></i></a>
-                                    <a href=""><i class="icofont-instagram"></i></a>
-                                    <a href=""><i class="icofont-linkedin"></i></a>
-                                </div>
+                                <span>Msc. Geoinformatics Engineering Student</span>
+                                <p>
+                                    Politecnico di Milano
+                                </p>
                             </div>
                         </div>
 
@@ -440,17 +773,10 @@
                             <div class="member">
                                 <img src="assets/img/team/Nashwan.jpg" alt="">
                                 <h4>Khairalla Nshwan</h4>
-                                <span>Student</span>
-                                <!-- <p>
-                                    Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto
-                                    rerum rerum temporibus
-                                </p> -->
-                                <div class="social">
-                                    <a href=""><i class="icofont-twitter"></i></a>
-                                    <a href=""><i class="icofont-facebook"></i></a>
-                                    <a href=""><i class="icofont-instagram"></i></a>
-                                    <a href=""><i class="icofont-linkedin"></i></a>
-                                </div>
+                                <span>Msc. Geoinformatics Engineering Student</span>
+                                <p>
+                                    Politecnico di Milano
+                                </p>
                             </div>
                         </div>
 
@@ -458,17 +784,10 @@
                             <div class="member">
                                 <img src="assets/img/team/Priyansh.jpg" alt="">
                                 <h4>Kumar Priyansh</h4>
-                                <span>Student</span>
-                                <!--  <p>
-                                    Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et
-                                    laborum toro des clara
-                                </p> -->
-                                <div class="social">
-                                    <a href=""><i class="icofont-twitter"></i></a>
-                                    <a href=""><i class="icofont-facebook"></i></a>
-                                    <a href=""><i class="icofont-instagram"></i></a>
-                                    <a href=""><i class="icofont-linkedin"></i></a>
-                                </div>
+                                <span>Msc. Geoinformatics Engineering Student</span>
+                                <p>
+                                    Politecnico di Milano
+                                </p>
                             </div>
                         </div>
 
