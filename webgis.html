@@ -13,7 +13,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/favicon.ico" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -51,16 +51,16 @@
             <div class="container">
 
                 <div class="logo float-left">
-                    <h1 class="text-light"><a href="/"><span>{{message}}</span></a></h1>
+                    <h1 class="text-light"><a href="index.html"><span>GISLAB</span></a></h1>
                     <!-- Uncomment below if you prefer to use an image logo -->
                     <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
                 </div>
 
                 <nav class="nav-menu float-right d-none d-lg-block">
                     <ul>
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="webgis.html">WebGIS</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="results.html">Results</a></li> 
+                        <li class="active"><a href="webgis.html">WebGIS</a></li>
                     </ul>
                 </nav><!-- .nav-menu -->
 
@@ -70,6 +70,20 @@
         <main class="">
             <div id="map" class="map"></div>
 
+            <div class="base-control tile-display">
+                <h4 class="no-margin">
+                    <label class="no-margin">
+                        <input type="checkbox" name="tiles" checked @click="toggleTiles()"> Tiles
+                    </label>
+                </h4>
+            </div>
+
+            <a href="results.html" target="new">
+                <div class="base-control more-info">
+                    <p class="no-margin">CLICK FOR RESULT DISCUSSION</p>
+                </div>
+            </a>
+
             <div class="base-control control-change-basemap">
                 <h4>Basemap</h4>
                 <label><input type="radio" name="basemap" checked @click="changeBasemap(0)"> OSM</label>
@@ -78,45 +92,41 @@
             </div>
 
             <div class="base-control control-select-raster-layers">
-                <h4>Raster Layers</h4>
+                <h4>Intercomparison Layers</h4>
                 <ul class="layer-list">
-                    <li v-for="layer in layer_array">
-                        <label><input type="checkbox" :name="layer.name" :checked="layer.visible"
-                                @click="toggleRasterLayer(layer.index)"> {{layer.displayName}}</label>
+                    <li v-for="i in intercomparison_layers">
+                        <label><input type="checkbox" :name="layer_array[i].name" :checked="layer_array[i].visible"
+                                @click="toggleLayer(layer_array[i].index)"> {{layer_array[i].displayName}}</label>
                     </li>
                 </ul>
             </div>
 
             <div class="base-control control-select-vector-layers">
-                <h4>Vector Layers</h4>
+                <h4>Validation Layers</h4>
                 <ul class="layer-list">
-                    <li v-for="layer in vector_layer_array">
-                        <label><input type="checkbox" :name="layer.name" :checked="layer.visible"
-                                @click="toggleVectorLayer(layer.index)"> {{layer.displayName}}</label>
+                    <li v-for="i in validation_layers">
+                        <label><input type="checkbox" :name="layer_array[i].name" :checked="layer_array[i].visible"
+                                @click="toggleLayer(layer_array[i].index)"> {{layer_array[i].displayName}}</label>
                     </li>
                 </ul>
             </div>
 
             <div class="base-control leyend">
                 <h4 class="leyend-title">Leyend</h4>
-                <div v-if="vector_layer_array[0].visible">
-                    <h5 class="leyend-category">Classified samples</h5>
-                    <h5 class="leyend-attribute">Match:</h5>
-                    <ul class="leyend-list">
-                        <li class="leyend-value"><span style="color: #319c19">█</span> Yes</li>
-                        <li class="leyend-value"><span style="color: #de3b35">█</span> No</li>
-                    </ul>
-                </div>
 
+                <div v-if="layer_array[0].visible || layer_array[1].visible || layer_array[2].visible">
+                    <h5 class="leyend-section">Intercomparison</h5>
+                </div>
                 <div v-if="layer_array[0].visible">
-                    <h5 class="leyend-category">GHS-Worldpop Differences</h5>
+                    <h5 class="leyend-category">GHS-Worldpop differences</h5>
                     <h5 class="leyend-attribute">GHS - Worldpop:</h5>
                     <ul class="leyend-list">
-                        <li class="leyend-value"><span style="color: #ca0020">█</span> -10799</li>
-                        <li class="leyend-value"><span style="color: #f4a582">█</span> 89.75</li>
-                        <li class="leyend-value"><span style="color: #ffffff">█</span> 10.798</li>
-                        <li class="leyend-value"><span style="color: #bababa">█</span> 21867.25</li>
-                        <li class="leyend-value"><span style="color: #404040">█</span> 32756</li>
+                        <li class="leyend-value"><span style="color: #ca0020">█</span> -9508</li>
+                        <li class="leyend-value"><span style="color: #f4a582">█</span> -428</li>
+                        <li class="leyend-value"><span style="color: #ffffff">█</span> 0</li>
+                        <li class="leyend-value"><span style="color: #a1a1a1">█</span> 8000</li>
+                        <li class="leyend-value"><span style="color: #575757">█</span> 17729</li>
+                        <li class="leyend-value"><span style="color: #000000">█</span> 26809</li>
                     </ul>
                 </div>
 
@@ -129,6 +139,38 @@
                         <li class="leyend-value"><span style="color: #ffffff">█</span> 16383.5</li>
                         <li class="leyend-value"><span style="color: #f4a582">█</span> 24575.25</li>
                         <li class="leyend-value"><span style="color: #ca0020">█</span> 32767</li>
+                    </ul>
+                </div>
+
+                <div v-if="layer_array[5].visible || layer_array[6].visible || layer_array[7].visible || layer_array[3].visible">
+                    <h5 class="leyend-section">Validation</h5>
+                </div>
+
+                <div v-if="layer_array[3].visible">
+                    <h5 class="leyend-category">Classified samples</h5>
+                    <h5 class="leyend-attribute">Match:</h5>
+                    <ul class="leyend-list">
+                        <li class="leyend-value"><span style="color: #319c19">█</span> Yes</li>
+                        <li class="leyend-value"><span style="color: #de3b35">█</span> No</li>
+                    </ul>
+                </div>
+
+                <div v-if="layer_array[5].visible">
+                    <h5 class="leyend-category">GHS-Worldpop +1</h5>
+                    <h5 class="leyend-attribute">Category:</h5>
+                    <ul class="leyend-list">
+                        <li class="leyend-value"><span style="color: #404040">█</span> 0 - GHS populated - Worldpop not populated</li>
+                        <li class="leyend-value"><span style="color: #ffffff">█</span> 1 - GHS and Worldpop both populated or not populated</li>
+                        <li class="leyend-value"><span style="color: #ca0020">█</span> 2 - Worldpop populated - GHS not populated</li>
+                    </ul>
+                </div>
+
+                <div v-if="layer_array[6].visible || layer_array[7].visible">
+                    <h5 class="leyend-category">Worldpop classified and GHS classified</h5>
+                    <h5 class="leyend-attribute">Category:</h5>
+                    <ul class="leyend-list">
+                        <li class="leyend-value"><span style="color: #fafafa">█</span> 1 - Not populated</li>
+                        <li class="leyend-value"><span style="color: #961f21">█</span> 2 - Populated</li>
                     </ul>
                 </div>
 
@@ -145,7 +187,7 @@
         <footer id="footer">
             <div class="container">
                 <div class="copyright">
-                    &copy; Copyright <strong><span>Amoeba</span></strong>. All Rights Reserved
+                    &copy; Copyright <strong><span>Politecnico di Milano</span></strong>. All Rights Reserved
                 </div>
                 <div class="credits">
                     <!-- All the links in the footer should remain intact. -->

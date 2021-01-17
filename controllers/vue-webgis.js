@@ -1,36 +1,6 @@
 //GLOBALS
 let geoserverBaseUrl = "http://ec2-54-80-227-106.compute-1.amazonaws.com/geoserver/";
 
-let experimental_rasterDiffLayer = new ol.layer.Image({
-    visible: true,
-    source: new ol.source.ImageWMS({
-        url: geoserverBaseUrl + "/wms",
-        params: {
-            'LAYERS': 'gis_lab:diff_ghs_worldpop_mosaic'
-        }
-    })
-});
-
-let experimental_rasterGHSLayer = new ol.layer.Image({
-    visible: false,
-    source: new ol.source.ImageWMS({
-        url: geoserverBaseUrl + "/wms",
-        params: {
-            'LAYERS': 'gis_lab:ghs_mosaic'
-        }
-    })
-});
-
-let experimental_rasterWorldpopLayer = new ol.layer.Image({
-    visible: false,
-    source: new ol.source.ImageWMS({
-        url: geoserverBaseUrl + "/wms",
-        params: {
-            'LAYERS': 'gis_lab:worldpop_mosaic'
-        }
-    })
-});
-
 let rasterDiffLayer = new ol.layer.Image({
     visible: true,
     source: new ol.source.ImageWMS({
@@ -57,6 +27,36 @@ let rasterWorldpopLayer = new ol.layer.Image({
         url: geoserverBaseUrl + "/wms",
         params: {
             'LAYERS': 'gis_lab:worldpop_complete'
+        }
+    })
+});
+
+let rasterDiffLayerClassified = new ol.layer.Image({
+    visible: false,
+    source: new ol.source.ImageWMS({
+        url: geoserverBaseUrl + "/wms",
+        params: {
+            'LAYERS': 'gis_lab:ghs_worldpop_difference_plus1'
+        }
+    })
+});
+
+let rasterGHSLayerClassified = new ol.layer.Image({
+    visible: false,
+    source: new ol.source.ImageWMS({
+        url: geoserverBaseUrl + "/wms",
+        params: {
+            'LAYERS': 'gis_lab:ghs_validation_classified'
+        }
+    })
+});
+
+let rasterWorldpopLayerClassified = new ol.layer.Image({
+    visible: false,
+    source: new ol.source.ImageWMS({
+        url: geoserverBaseUrl + "/wms",
+        params: {
+            'LAYERS': 'gis_lab:worldpop_validation_classified'
         }
     })
 });
@@ -109,6 +109,7 @@ var selectClick = new ol.interaction.Select({
 });
 
 let all_samples = new ol.layer.Vector({
+    visible: false,
     source: new ol.source.Vector({
         format: new ol.format.GeoJSON(),
         url: "http://ec2-54-80-227-106.compute-1.amazonaws.com/geoserver/gis_lab/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=gis_lab:all_samples&outputFormat=application/json"
@@ -143,7 +144,6 @@ let controls = ol.control.defaults({
 var app = new Vue({
     el: '#app',
     data: {
-        message: 'GISLAB',
         target: "map",
         map: {},
         basemap_layer: {},
@@ -156,65 +156,66 @@ var app = new Vue({
         layer_array: [{
                 "layer": rasterDiffLayer,
                 "displayName": " GHS-Worldpop Differences",
-                "name": "layer1",
+                "name": "layer0",
                 "index": 0,
                 "visible": true
             },
             {
                 "layer": rasterGHSLayer,
                 "displayName": "GHS",
-                "name": "layer2",
-                "index": 1,
-                "visible": false
-            },
-            {
-                "layer": rasterWorldpopLayer,
-                "displayName": " Worldpop",
-                "name": "layer3",
-                "index": 2,
-                "visible": false
-            }
-        ],
-
-        experimental_layer_array: [{
-                "layer": rasterDiffLayer,
-                "displayName": " Diff raster",
                 "name": "layer1",
-                "index": 0,
-                "visible": true
-            },
-            {
-                "layer": rasterGHSLayer,
-                "displayName": "GHS",
-                "name": "layer2",
                 "index": 1,
                 "visible": false
             },
             {
                 "layer": rasterWorldpopLayer,
                 "displayName": " Worldpop",
-                "name": "layer3",
+                "name": "layer2",
                 "index": 2,
                 "visible": false
-            }
-
-        ],
-
-        vector_layer_array: [{
+            },
+            {
                 "layer": all_samples,
                 "displayName": " Classified samples",
-                "name": "layer4",
-                "index": 0,
-                "visible": true
+                "name": "layer3",
+                "index": 3,
+                "visible": false
             },
             {
                 "layer": group5Tiles,
                 "displayName": " Tiles",
-                "name": "layer5",
-                "index": 1,
+                "name": "layer4",
+                "index": 4,
                 "visible": true
             },
+            {
+                "layer": rasterDiffLayerClassified,
+                "displayName": " GHS-Worldpop +1",
+                "name": "layer5",
+                "index": 5,
+                "visible": false
+            },
+            {
+                "layer": rasterGHSLayerClassified,
+                "displayName": "GHS classified",
+                "name": "layer6",
+                "index": 6,
+                "visible": false
+            },
+            {
+                "layer": rasterWorldpopLayerClassified,
+                "displayName": " Worldpop classified",
+                "name": "layer7",
+                "index": 7,
+                "visible": false
+            },
+        ],
 
+        intercomparison_layers: [
+            0, 1, 2
+        ],
+        validation_layers: [
+            5,6,7,3
         ],
 
         // Array of basemap sources
@@ -264,8 +265,11 @@ var app = new Vue({
                     this.layer_array[0].layer,
                     this.layer_array[1].layer,
                     this.layer_array[2].layer,
-                    this.vector_layer_array[0].layer,
-                    this.vector_layer_array[1].layer
+                    this.layer_array[3].layer,
+                    this.layer_array[5].layer,
+                    this.layer_array[6].layer,
+                    this.layer_array[7].layer,
+                    this.layer_array[4].layer,
                 ],
                 view: new ol.View({
 
@@ -283,32 +287,31 @@ var app = new Vue({
             this.basemap_layer.setSource(this.basemap_array[index]);
         },
 
-        toggleRasterLayer(index) {
+        toggleLayer(index) {
             let layer = this.layer_array[index].layer;
             this.layer_array[index].visible = !this.layer_array[index].visible;
             layer.setVisible(!layer.getVisible());
         },
 
-        toggleVectorLayer(index) {
-            let layer = this.vector_layer_array[index].layer;
-            if(index == 1){
-                this.featureSelected.visible = !this.featureSelected.visible;
-            }
-            this.vector_layer_array[index].visible = !this.vector_layer_array[index].visible;
+        toggleTiles(){
+            index = 4;
+            let layer = this.layer_array[index].layer;
+            this.layer_array[index].visible = !this.layer_array[index].visible;
+            this.featureSelected.visible = !this.featureSelected.visible;
             layer.setVisible(!layer.getVisible());
         },
 
-        changeSelection(feature){
-            if(feature == undefined){
+        changeSelection(feature) {
+            if (feature == undefined) {
                 this.featureSelected.feature = "Tile not selected";
                 this.featureSelected.attribute = "";
-                this.featureSelected.value = "Click a tile to see correlation value";  //There is a typo in the layer field name...
+                this.featureSelected.value = "Click a tile to see correlation value"; //There is a typo in the layer field name...
             } else {
                 this.featureSelected.feature = "Tile " + feature.get('tileID');;
                 this.featureSelected.attribute = "Correlation";
-                this.featureSelected.value = feature.get('correlatio');  //There is a typo in the layer field name...
+                this.featureSelected.value = feature.get('correlatio'); //There is a typo in the layer field name...
             }
-            
+
         },
 
         initClickListener() {
