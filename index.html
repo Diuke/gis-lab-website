@@ -64,9 +64,8 @@
         <!-- ======= Hero Section ======= -->
         <section id="hero">
             <div class="hero-container">
-                <h1>GIS LAB</h1>
-                <h2>World Population Maps Intercomparison and Validation</h2>
-                <a href="webgis.html" class="btn-get-started scrollto">Go to WebGIS!</a>
+                <h1>World Population Maps Intercomparison and Validation</h1>
+                <a href="webgis.html" class="btn-get-started scrollto mt-5">Go to WebGIS!</a>
             </div>
         </section><!-- #hero -->
 
@@ -82,7 +81,7 @@
 
                     <div class="row">
                         <div class="col-lg-6 order-1 order-lg-2">
-                            <img src="assets/img/AboutProject.jpg" class="img-fluid" alt="">
+                            <img src="assets/img/AboutProject.png" class="img-fluid" alt="">
                         </div>
                         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
                             <h3>This project is about <B>Intercomparision</B> and <B>Validation</B> of
@@ -265,48 +264,56 @@
                     <ul class="faq-list">
 
                         <li>
-                            <a data-toggle="collapse" class="" href="#faq1"> Processing of the system slow down.<i
+                            <a data-toggle="collapse" class="" href="#faq1"> Size of rasters - Processing time.<i
                                     class="icofont-simple-up"></i></a>
                             <div id="faq1" class="collapse show" data-parent=".faq-list">
                                 <p>
-                                    As the Worldpop-PopulationCount data was very big the Qgis tool slow down and thats
-                                    why each processing was taking time to process.
+                                    As the Worldpop-PopulationCount and GHS-POP rasters were very big, QGIS took long times processing the rasters for some tasks.<br>
+                                    The resulting rasters are 240MB each, posing also a problem to Geoserver, reason why we had to upgrade our initial 1GB RAM instance to one with 2GB.<br>
+                                    OpenLayers and Geoserver handles the raster data optimally, so despite being big rasters, the loading times are very fast and the layer appears with lower resolution on 
+                                    bigger extends, while it appears with higher resolution at close distances.
                                 </p>
                             </div>
                         </li>
 
                         <li>
-                            <a data-toggle="collapse" href="#faq2" class="collapsed">New to the QGIS Framework<i
+                            <a data-toggle="collapse" href="#faq2" class="collapsed">Familiarity with the QGIS Software<i
                                     class="icofont-simple-up"></i></a>
                             <div id="faq2" class="collapse" data-parent=".faq-list">
                                 <p>
-                                    It was a new exposure for our group to the QGIS tool, at some steps it took
-                                    additional efforts to learn about the specific Plugin
-                                    or Processing tool.
+                                    It was a new exposure for some members our group to the QGIS Software. At some steps it took
+                                    additional efforts to learn about specific Plugins or Processing tools.
                                 </p>
                             </div>
                         </li>
 
                         <li>
-                            <a data-toggle="collapse" href="#faq3" class="collapsed">Handling of Data Type for each
-                                Layer.<i class="icofont-simple-up"></i></a>
+                            <a data-toggle="collapse" href="#faq3" class="collapsed">Handling of Data Types.<i class="icofont-simple-up"></i></a>
                             <div id="faq3" class="collapse" data-parent=".faq-list">
                                 <p>
-                                    We need to have the integer data type for each layer but due to the use of raster
-                                    calculator each time we have to be carefully
-                                    convert each layer to integer data type.
+                                    For comparison we needed the layers to be in integer data type. The default QGIS raster calculator
+                                    always convert the output layer to float, so we instead used the GRASS raster calculator, that is harder to use but is more 
+                                    flexible because it allows to pick the data type of the output layer.
                                 </p>
                             </div>
                         </li>
 
                         <li>
-                            <a data-toggle="collapse" href="#faq4" class="collapsed">Handling Null Values for each
-                                layers.<i class="icofont-simple-up"></i></a>
+                            <a data-toggle="collapse" href="#faq4" class="collapsed">Handling of Null Values.<i class="icofont-simple-up"></i></a>
                             <div id="faq4" class="collapse" data-parent=".faq-list">
                                 <p>
-                                    We have to align the Null values for different layers for intercomparison. After
-                                    each conversion of data type
-                                    and processing of layer we have to check the null values carefuly.
+                                    We had to align the null values of different layers for intercomparison. The default QGIS raster calculator 
+                                    posed a big issue handling the null values, while the GRASS raster calculator did all the processing without any errors.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a data-toggle="collapse" href="#faq5" class="collapsed">Hosting of Geoserver.<i class="icofont-simple-up"></i></a>
+                            <div id="faq5" class="collapse" data-parent=".faq-list">
+                                <p>
+                                    Geoserver is a Java-based OGC web server. To expose the processed layers on the internet, not only locally, we had to upload Geoserver to 
+                                    an AWS EC2 instance with Ubuntu on top of an Apache Tomcat webserver, with all configuration needed, including the FTP service to upload the layers.
                                 </p>
                             </div>
                         </li>
@@ -329,7 +336,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                             <div class="member">
-                                <img src="assets/img/team/Juan.jpg" alt="">
+                                <img src="assets/img/team/Juan.png" alt="">
                                 <h4>Juan Pablo Duque Ordoñez </h4>
                                 <span>Msc. Geoinformatics Engineering Student</span>
                                 <p>
