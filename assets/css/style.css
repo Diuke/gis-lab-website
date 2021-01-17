@@ -903,3 +903,15 @@ section {
   font-size: 13px;
   color: #fff;
 }
+
+li > p{
+  text-align: justify!important;
+}
+
+#results ul i{
+  font-size: 27px!important;
+}
+.title-results{
+  font-size: 27px!important;
+  margin-bottom: 5px;
+}

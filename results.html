@@ -7,7 +7,7 @@
 
     <base href="/gis-lab-website/">
 
-    <title>GIS LAB PROJECT GROUP 5</title>
+    <title>GISLAB - About</title>
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
 
@@ -52,7 +52,7 @@
                 <nav class="nav-menu float-right d-none d-lg-block">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li class="active"><a href="about.html">About</a></li>
+                        <li class="active"><a href="results.html">Results</a></li>
                         <li><a href="webgis.html">WebGIS</a></li>
                     </ul>
                 </nav><!-- .nav-menu -->
@@ -64,194 +64,12 @@
         <section id="hero">
             <div class="hero-container">
                 <h1>GIS LAB</h1>
-                <h2>About the project, Implementation and Results Discussion</h2>
+                <h2>Presentation of Results and Interpretation</h2>
                 <a href="webgis.html" class="btn-get-started scrollto">Open WebGIS</a>
             </div>
         </section><!-- #hero -->
 
         <main id="main">
-
-            <!-- ======= About Us Section ======= -->
-            <section id="about" class="about">
-                <div class="container">
-
-                    <div class="section-title">
-                        <h2>About Project</h2>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-6 order-1 order-lg-2">
-                            <img src="assets/img/AboutProject.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
-                            <h3>This project is about <B>Intercomparision</B> and <B>Validation</B> of
-                                two World Population Maps.</h3>
-                            <p class="font-italic">
-                                World population maps provide global information, evidence-based
-                                analytics, and knowledge on human presence on the planet. The ultimate goal of these
-                                maps is to ensure that every person is mapped and counted within critical operations
-                                such as policy making and disasters response.
-                            </p>
-                            <ul>
-                                <li><i class="icofont-check-circled"></i> We used the data from two world population
-                                    raster
-                                    maps that are worldwide used: <a href="https://ghsl.jrc.ec.europa.eu/ghs_pop.php"
-                                        target="new">GHS-Population Grid</a> and <a
-                                        href="https://www.worldpop.org/project/categories?id=3"
-                                        target="new">WorldPOP-Population Counts.</a></li>
-                                <li><i class="icofont-check-circled"></i><b>GHS-Population Grid</b> (2015) is used and
-                                    maintained
-                                    by the European Union.
-                                    It is a raster map with CRS WGS84 and resolution of 1km for each pixel of
-                                    raster.<br>
-                                    This spatial raster dataset depicts the distribution of population, expressed as the
-                                    number of people per cell.
-                                </li>
-                                <li><i class="icofont-check-circled"></i><b>WorldPOP-Population Count</b> (2015). Is
-                                    managed by
-                                    various academic
-                                    institutions. It is a raster layer with CRS WGS84 and resolution of 1km
-                                    for each pixel. <br>
-                                    This dataset tells the population density per each pixel.
-                                </li>
-                                <li><i class="icofont-check-circled"></i>Our group was in charge of intercomparing and
-                                    validate the portion of the GHS-POP tiles
-                                    corresponding to some <b>Pacific Ocean Islands</b>, the southern-most part
-                                    of <b>South America</b>, Part of <b>South Africa</b> and some <b>Atlantic Ocean
-                                        Islands</b> for both of the
-                                    Raster Maps.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row pt-5">
-                        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
-                            <ul>
-                                <li><i class="icofont-check-circled"></i><B>INTERCOMPARISON:</B><br>
-                                    <p style="text-align: justify; margin-top: 10px;">
-                                        Intercomparison is a comparison of two distinct datasets to assess to which
-                                        extent two of them share the same information.<br>
-                                        To make intercomparison, the maps must have the same extent, resolution, pixel
-                                        classes or variable, and CRS.<br>
-                                        For our project we compared the GHS-POP and WorlPOP datasets, that share the
-                                        same variable (population density),
-                                        are from the same year (2015), and share the same pixel resolution (1km). <br>
-                                        We had to align them to perform the intercomparison so they both shared the same
-                                        extent.<br>
-
-                                        For intercomparison no external data is necessary.
-                                    </p>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
-                            <ul>
-                                <li><i class="icofont-check-circled"></i><B>VALIDATION:</B> <br>
-                                    <p>
-                                        Validation is a comparison of a map with a reference dataset with the aim to
-                                        determine map accuracy.<br>
-                                        Typically, reference data are collected in a field (on-site)
-                                        survey or in photo-interpretation of very-high-resolution satellite imagery or
-                                        orthophoto.<br>
-
-
-                                    </p>
-                                    We validated our raster maps GHS-POP and WorldPOP by creating a reference dataset
-                                    based on three scenarios: <br>
-                                    0 = GHS not populated but WorldPOP populated. <br>
-                                    1 = GHS and WorldPOP either both populated or both unpopulated. <br>
-                                    2 = GHS populated and WorldPOP not populated. <br>
-
-                                    We used Bing maps
-                                    and Google Maps as high resolution satellite maps for photo-classification,
-                                    and the QGIS ACaTaMa plugin for
-                                    sampling the data and classifying the reference dataset as populated or not
-                                    populated taking as criteria if there was at least one house on the raster cell.<br>
-                                    Finally, we used a python script that
-                                    performed the accuracy and error matrix calculation for both GHS-POP and WorldPOP
-                                    maps.
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </section><!-- End About Us Section -->
-
-            <!-- ======= Services Section ======= -->
-            <section id="services" class="services section-bg">
-                <div class="container">
-
-                    <div class="section-title">
-                        <h2>Tools and Services Used</h2>
-                        <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.
-                            Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit
-                            alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 icon-box">
-                            <div class="icon"><i class="icofont-computer"></i></div>
-                            <h4 class="title">QGIS</h4>
-                            <p class="description">QGIS is a free and open-source cross-platform desktop geographic
-                                information system application that supports viewing,
-                                editing, and analysis of geospatial data. It also provides processing tools like <B>
-                                    GRASS GIS and GDAL </B> that were used in this
-                                project.</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 icon-box">
-                            <div class="icon"><i class="icofont-plugin"></i></div>
-                            <h4 class="title">QGIS Plugins</h4>
-                            <p class="description">We used the QGIS plugin <B>AcATaMa</B> Accuracy Assessment of
-                                Thematic Maps and <B>Quick Map
-                                    Services</B> to include satellite imagery from different basemaps - Google Satellite
-                                and Bing Satellite. We also used python for automating tasks and processing with the
-                                <B>pyQGIS</B> library.
-                            </p>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 icon-box">
-                            <div class="icon"><i class="icofont-file-javascript"></i></div>
-                            <h4 class="title">Vue.js</h4>
-                            <p class="description">Vue is a progressive framework for building user interfaces. The core
-                                library is focused on the view layer only, and is easy to
-                                pick up and integrate with other libraries or existing projects. We used it to provide
-                                awesome interactivity to the WebGIS map!</p>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 icon-box">
-                            <div class="icon"><i class="icofont-image"></i></div>
-                            <h4 class="title">Open Layers</h4>
-                            <p class="description">OpenLayers is an open-source JavaScript library for displaying map
-                                data in web browsers as slippy maps.
-                                It provides an API for building rich web-based geographic applications similar to Google
-                                Maps and Bing Maps</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 icon-box">
-                            <div class="icon"><i class="icofont-earth"></i></div>
-                            <h4 class="title">GeoServer</h4>
-                            <p class="description">
-                                GeoServer is an open source software server written in Java that allows users to share
-                                and edit geospatial data.
-                                Designed for interoperability, it publishes data from any major spatial data source
-                                using open standards.
-                            </p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 icon-box">
-                            <div class="icon"><i class="icofont-cloudapp"></i></div>
-                            <h4 class="title">AWS</h4>
-                            <p class="description">
-                                AWS (Amazon Web Services) is a secured cloud services platform that offers computing
-                                power, database storage, content delivery and various other functionalities.
-                                We used AWS S3 to host this website and an EC2 instance to host Geoserver!
-                            </p>
-                        </div>
-
-                    </div>
-            </section><!-- End Services Section -->
 
             <!-- ======= About Us Section ======= -->
             <section id="results" class="about">
@@ -270,7 +88,8 @@
                                         Before droping to the results section, let us specify the working space.
                                     </p>
                                     <p>
-                                        Our group was in charge of the GHS-POP tiles depicted in the picture below. All the tiles are squared but are distorted in the image due to the projection.
+                                        Our group was in charge of the GHS-POP tiles depicted in the picture below. All
+                                        the tiles are squared but are distorted in the image due to the projection.
                                     </p>
                                     <div class="text-center">
                                         <img src="assets/img/layers/tile-extent.png" style="width: 100%;">
@@ -279,13 +98,15 @@
 
                             </ul>
 
-                            <h3 class="pt-5"><b>Intercomparison Results</b></h3>
+                            <hr>
+
+                            <h2 class="pt-5"><b>Intercomparison Results</b></h2>
                             <p class="font-italic">
                                 Output and statistics of the intercomparison step.
                             </p>
                             <ul>
                                 <li>
-                                    <i class="icofont-check-circled"></i> <b>Output:</b>
+                                    <i class="icofont-check-circled"></i> <b class="title-results">Output:</b>
                                     <p>
                                         In the intercomparison step we generated three rasters: the GHS-POP and WorldPOP
                                         aligned and clipped to
@@ -298,10 +119,10 @@
                                 </li>
 
                                 <li class="pt-3">
-                                    <i class="icofont-check-circled"></i> <b>Statistics:</b>
+                                    <i class="icofont-check-circled"></i> <b class="title-results">Statistics:</b>
                                     <p>
                                         We calculated univariate statistics for the differences raster using <b>GRASS
-                                        r.univar</b> function and correlation values
+                                            r.univar</b> function and correlation values
                                         between GHS-POP and WorldPOP rasters using <b>GRASS r.covar</b> function.<br>
                                         Correlation values were calculated for the complete raster, and for each one of
                                         the tiles, i.e. correlation of both rasters clipped in single tile.
@@ -343,9 +164,12 @@
                                     </table>
 
                                     <p>
-                                        From the table we concluded that as the mean is very close to zero both rasters are very similar, but there are very big differences – probably outliers –  
-                                        as we can see values very far from zero as the minimum and maximum values. The variance and standard deviation are also big, probably due to those values.<br>
-                                        A high variance indicates that the data points are very spread out from the mean, and from one another. 
+                                        From the table we concluded that as the mean is very close to zero both rasters
+                                        are very similar, but there are very big differences – probably outliers –
+                                        as we can see values very far from zero as the minimum and maximum values. The
+                                        variance and standard deviation are also big, probably due to those values.<br>
+                                        A high variance indicates that the data points are very spread out from the
+                                        mean, and from one another.
                                     </p>
 
                                     <h4 class="pt-5">Correlation of GHS-POP and WorldPOP:</h4>
@@ -374,11 +198,11 @@
                                         <tbody>
                                             <thead>
                                                 <tr>
-                                                  <th scope="col">Tile ID</th>
-                                                  <th scope="col">Number of pixels</th>
-                                                  <th scope="col">Correlation</th>
+                                                    <th scope="col">Tile ID</th>
+                                                    <th scope="col">Number of pixels</th>
+                                                    <th scope="col">Correlation</th>
                                                 </tr>
-                                              </thead>
+                                            </thead>
                                             <tr>
                                                 <td>360</td>
                                                 <td>3203</td>
@@ -517,43 +341,227 @@
                                         </tbody>
                                     </table>
                                     <p>
-                                        <b>* Calculated correlation of NULL due to all of the raster values being 0 in both rasters, which in practice is correlation of 1.</b>
+                                        <b>* Calculated correlation of NULL due to all of the raster values being 0 in
+                                            both rasters, which in practice is correlation of 1.</b>
                                     </p>
                                     <p>
-                                        Correlation values on each tile can be seen in the <a href="webgis.html" target="new">WebGIS</a> by clicking on each tile.<br><br>
+                                        Correlation values on each tile can be seen in the <a href="webgis.html"
+                                            target="new">WebGIS</a> by clicking on each tile.<br><br>
 
-                                        We can consider 2 kind of tiles: Tiles containing the small islands that have very few amount of data (always less than 4000), and tiles containing the mainland and big islands (Falkland Islands) that have a lot of data available.
-                                        The correlation in small islands tiles is very variable, ranging from <b>0.230698</b> to <b>0.873545</b>. Values of 1 are left aside because the islands in those tiles are inhabited and both datasets properly label all pixels as 0.<br>
-                                        The variability in correlation may be explained by the little amount of data, making it very succeptible to outliers.<br><br>
+                                        We can consider 2 kind of tiles: Tiles containing the small islands that have
+                                        very few amount of data (always less than 4000), and tiles containing the
+                                        mainland and big islands (Falkland Islands) that have a lot of data available.
+                                        The correlation in small islands tiles is very variable, ranging from
+                                        <b>0.230698</b> to <b>0.873545</b>. Values of 1 are left aside because the
+                                        islands in those tiles are inhabited and both datasets properly label all pixels
+                                        as 0.<br>
+                                        The variability in correlation may be explained by the little amount of data,
+                                        making it very succeptible to outliers.<br><br>
 
-                                        On the other side, the mainland and big islands tiles are generally more robust, ranging from <b>0.516338</b> to <b>0.983315</b>, always above <b>0.5</b>.<br>
-                                        The low value <b>0.516338</b> corresponds to half of the Falkland islands, and is the tile with less data of the mainland and big islands tiles with 19973 pixels.
-                                        The second lower value is <b>0.6931</b> and corresponds to the mainly inhabited area of Magallanes province in Chile and half of the Argentinian Patagonia. This places have very low population density and, specially the Magallanes province, is very geographically complex. Outliers in the calculation of the values could lead to the low correlation value.<br>
-                                        Aside from those values, all correlation values in mainland and big island tiles exceed <b>0.8</b>.
+                                        On the other side, the mainland and big islands tiles are generally more robust,
+                                        ranging from <b>0.516338</b> to <b>0.983315</b>, always above <b>0.5</b>.<br>
+                                        The low value <b>0.516338</b> corresponds to half of the Falkland islands, and
+                                        is the tile with less data of the mainland and big islands tiles with 19973
+                                        pixels.
+                                        The second lower value is <b>0.6931</b> and corresponds to the mainly inhabited
+                                        area of Magallanes province in Chile and half of the Argentinian Patagonia. This
+                                        places have very low population density and, specially the Magallanes province,
+                                        is very geographically complex. Outliers in the calculation of the values could
+                                        lead to the low correlation value.<br>
+                                        Aside from those values, all correlation values in mainland and big island tiles
+                                        exceed <b>0.8</b>.
                                     </p>
                                 </li>
 
                             </ul>
 
-                            
-                            <h3 class="pt-5"><b>Validation Results</b></h3>
+                            <hr>
+
+                            <h2 class="pt-5"><b>Validation Results</b></h2>
                             <p class="font-italic">
                                 Output and statistics of the validation step.
                             </p>
                             <ul>
                                 <li>
-                                    <i class="icofont-check-circled"></i> <b>Output:</b>
+                                    <i class="icofont-check-circled"></i> <b class="title-results">Output:</b>
                                     <p>
-                                        In the validation step we generated three rasters: the GHS-POP and WorldPOP classified to <b>populated</b> or <b>not populated</b> using the rasters previously processed in the intercomparison, and 
-                                        a raster calculating the differences between the classification rasters, with the following values: <br>
+                                        In the validation step we generated three rasters: the GHS-POP and WorldPOP
+                                        classified to <b>populated (value = 2)</b> or <b>not populated (value = 1)</b>
+                                        using the rasters
+                                        previously processed in the intercomparison, and
+                                        a raster calculating the differences between the classification rasters, with
+                                        the following values: <br>
                                         <b>0</b> = GHS not populated but WorldPOP populated.<br>
                                         <b>1</b> = GHS and WorldPOP either both populated or both unpopulated.<br>
                                         <b>2</b> = GHS populated and WorldPOP not populated.<br><br>
-                                        
-                                        Also, we generated <b>600</b> sampling points with the QGIS AcATaMa plugin that were classified using satellite imagery from Bing Satellite and Google Satellite and used as the reference for the validation.<br><br>
-                                        All layers can be seen on the <a target="new" href="webgis.html">WebGIS.</a>
+
+                                        Also, we generated <b>600</b> sampling points with the QGIS AcATaMa plugin that
+                                        were classified using satellite imagery from Bing Satellite and Google Satellite
+                                        and used as the reference for the validation.<br><br>
+
+                                        Finally, we generated accuracy statistics for both GHS-POP and WorldPOP
+                                        classified rasters and the error matrix (also called confusion matrix) using a
+                                        python script.<br>
+                                        The accuracy indices measure:<br>
+                                        <b>Overall accuracy (OA)</b>: Proportion of correctly classified pixels in total
+                                        number of pixels. <br>
+                                        <b>User’s accuracy (UA)</b>: Shows how often a user of thematic raster can
+                                        expect to find the class on the ground. <br>
+                                        <b>Producer’s accuracy (PA)</b>: Probability that the class present on the
+                                        ground is also captured by classification in the thematic raster. <br><br>
+                                        All layers can be seen on the <a href="webgis.html" target="new">WebGIS.</a>
                                     </p>
                                 </li>
+
+                                <li class="pt-3">
+                                    <i class="icofont-check-circled"></i> <b class="title-results">Sampling:</b>
+                                    <p>
+                                        The sampling was performed using the QGIS plugin AcATaMa. It generated
+                                        <b>600</b> points using the categories from the raster with the differences
+                                        between the classified GHS-POP and WorldPOP. <br>
+                                        The distribution of the samples is as follows:<br>
+                                        - 33% of points where GHS-POP not populated, but WorldPOP populated (category
+                                        0)<br>
+                                        - 34% of points where GHS-POP and WorldPOP either both populated or unpopulated
+                                        (category 1)<br>
+                                        - 33% of points where WorldPOP not populated, but GHS-POP populated (category
+                                        2)<br>
+                                    </p>
+                                    <p>
+                                        We did 3 random samplings of 200 points, one for each member of the group, and
+                                        merged the results into one single vector layer. In each individual sampling the
+                                        distance between samples is at least <b>0.08 degrees</b> because of to the
+                                        raster resolution, but in the complete sampling points can be closer.
+                                    </p>
+                                    <p>
+                                        This classified sampled points are the reference data for the validation, since
+                                        the classification was done manually using high-resolution satellite images.
+                                    </p>
+                                </li>
+
+                                <li class="pt-3">
+                                    <i class="icofont-check-circled"></i> <b class="title-results">Statistics:</b>
+                                    <p>
+                                        Error matrices and accuracy indices for GHS-POP and WorldPOP thematic rasters.
+                                    </p>
+                                    <h4>GHS-POP validation</h4>
+                                    <p>Error matrix:</p>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"></th>
+                                                <th scope="col">1 (Classified)</th>
+                                                <th scope="col">2 (Classified)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1 (GHS class)</th>
+                                                <td>323</td>
+                                                <td>63</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2 (GHS class)</th>
+                                                <td>175</td>
+                                                <td>39</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <p>
+                                        Accuracy indices:
+                                    </p>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Class</th>
+                                                <th scope="col">User's Accuracy</th>
+                                                <th scope="col">Producer's accuracy</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1 - Not populated</th>
+                                                <td>0.84</td>
+                                                <td>0.65</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2 - Populated</th>
+                                                <td>0.18</td>
+                                                <td>0.38</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h5 style="color: #212529">
+                                        <b>Overall Accuracy: </b>0.6033
+                                    </h5>
+
+                                    <h4 class="pt-5">WorldPOP validation</h4>
+                                    <p>Error matrix:</p>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"></th>
+                                                <th scope="col">1 (Classified)</th>
+                                                <th scope="col">2 (Classified)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1 (WorldPOP class)</th>
+                                                <td>350</td>
+                                                <td>36</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2 (WorldPOP class)</th>
+                                                <td>148</td>
+                                                <td>66</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <p>
+                                        Accuracy indices:
+                                    </p>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Class</th>
+                                                <th scope="col">User's Accuracy</th>
+                                                <th scope="col">Producer's accuracy</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1 - Not populated</th>
+                                                <td>0.91</td>
+                                                <td>0.7</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2 - Populated</th>
+                                                <td>0.31</td>
+                                                <td>0.65</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h5 style="color: #212529">
+                                        <b>Overall Accuracy: </b>0.6933
+                                    </h5> 
+
+                                    <h3 class="pt-5">Results Interpretation</h3>
+                                    <p>
+                                        After performing the validation and accuracy analysis with the reference samples we obtained from high-resultion satellite imagery, we concluded that that WorldPOP map has a higher 
+                                        accuracy in overall accuracy and in both the user accuracy and producer accuracy for both classes with respect to GHS-POP.<br><br>
+
+                                        In both maps the accuracy for <b>not populated</b> is much higher than the accuracy for <b>populated</b> values. Looking at the classified rasters in the <a href="webgis.html" target="new">WebGIS</a> we can see that WorldPOP has 
+                                        much more area classified as populated than GHS-POP.<br><br>
+
+                                        The error matrices show in the main diagonal the elements that were correctly classified with respect to the category, and the off-diagonal elements show the elements that were wrongly classified. In both error matrices we can see that on the populated class 
+                                        more than double of the correctly classified points were missclassified, with a slight improvement in WorldPOP. This explains the low accuracy for the populated category.<br>
+                                        The higher accuracy in populated class for WorldPOP can be explained by the fact that WorldPOP have more area classified as populated than GHS-POP.
+                                    </p>
+                                </li>
+
                             </ul>
 
 
@@ -575,7 +583,7 @@
                         <div class="col-lg-12">
                             <ul id="portfolio-flters">
                                 <li data-filter="*" class="filter-active">All</li>
-                                <li data-filter=".filter-InterComparisionLayers">InterComparision Layers</li>
+                                <li data-filter=".filter-InterComparisionLayers">Intercomparision Layers</li>
                                 <li data-filter=".filter-ValidationLayers">Validation Layers</li>
                                 <!--<li data-filter=".filter-web">Web</li>-->
                             </ul>
@@ -591,7 +599,7 @@
                                 <img src="assets/img/portfolio/GHS_intercomp.png" class="img-fluid" alt="">
                                 <div class="portfolio-info">
                                     <h3><a href="assets/img/portfolio/GHS_intercomp.png" data-gall="portfolioGallery"
-                                            class="venobox" title="GHS Intercomparision">GHS Intercomparision</a></h3>
+                                            class="venobox" title="GHS Intercomparision">GHS - Intercomparision</a></h3>
                                     <a href="assets/img/portfolio/GHS_intercomp.png" data-gall="portfolioGallery"
                                         class="venobox" title="GHS Intercomparision"><i class="icofont-plus"></i></a>
                                 </div>
@@ -604,7 +612,7 @@
                                 <div class="portfolio-info">
                                     <h3><a href="assets/img/portfolio/Worlpop_intercomp.png"
                                             data-gall="portfolioGallery" class="venobox"
-                                            title="WorldPOP Intercomparision">WorldPOP Intercomparision</a></h3>
+                                            title="WorldPOP Intercomparision">WorldPOP - Intercomparision</a></h3>
                                     <a href="assets/img/portfolio/Worlpop_intercomp.png" data-gall="portfolioGallery"
                                         class="venobox" title="WorldPOP Intercomparision"><i
                                             class="icofont-plus"></i></a>
@@ -617,8 +625,7 @@
                                 <img src="assets/img/portfolio/Intercomp_Diff.png" class="img-fluid" alt="">
                                 <div class="portfolio-info">
                                     <h3><a href="assets/img/portfolio/Intercomp_Diff.png" data-gall="portfolioGallery"
-                                            class="venobox" title="GHS-WORLDPOP Intercomparision">GHS-WORLDPOP
-                                            Intercomparision</a></h3>
+                                            class="venobox" title="GHS-WORLDPOP Intercomparision">GHS-WorldPOP Differences - Intercomparision</a></h3>
                                     <a href="assets/img/portfolio/Intercomp_Diff.png" data-gall="portfolioGallery"
                                         class="venobox" title="GHS-WORLDPOP Intercomparision"><i
                                             class="icofont-plus"></i></a>
@@ -633,7 +640,7 @@
                                 <div class="portfolio-info">
                                     <h3><a href="assets/img/portfolio/Worlpop_Reclassify_int.png"
                                             data-gall="portfolioGallery" class="venobox"
-                                            title="Worldpop Reclassify">Worldpop Reclassify</a></h3>
+                                            title="Worldpop Reclassify">Worldpop - Classified</a></h3>
                                     <a href="assets/img/portfolio/Worlpop_Reclassify_int.png"
                                         data-gall="portfolioGallery" class="venobox" title="Worldpop Reclassify"><i
                                             class="icofont-plus"></i></a>
@@ -647,7 +654,7 @@
                                 <div class="portfolio-info">
                                     <h3><a href="assets/img/portfolio/GHS-reclassify_int.png"
                                             data-gall="portfolioGallery" class="venobox" title="GHS Reclassify">GHS
-                                            Reclassify</a></h3>
+                                            Classified</a></h3>
                                     <a href="assets/img/portfolio/GHS-reclassify_int.png" data-gall="portfolioGallery"
                                         class="venobox" title="GHS Reclassify"><i class="icofont-plus"></i></a>
                                 </div>
@@ -660,7 +667,7 @@
                                 <div class="portfolio-info">
                                     <h3><a href="assets/img/portfolio/3-Different-Scenarios.png"
                                             data-gall="portfolioGallery" class="venobox"
-                                            title="Different Scenarios Layer">Different Scenarios Layer</a></h3>
+                                            title="Different Scenarios Layer">Different Scenarios Layer - Validation</a></h3>
                                     <a href="assets/img/portfolio/3-Different-Scenarios.png"
                                         data-gall="portfolioGallery" class="venobox"
                                         title="Different Scenarios Layer"><i class="icofont-plus"></i></a>
@@ -673,7 +680,7 @@
                                 <img src="assets/img/portfolio/Sampling_Layer.png" class="img-fluid" alt="">
                                 <div class="portfolio-info">
                                     <h3><a href="assets/img/portfolio/Sampling_Layer.png" data-gall="portfolioGallery"
-                                            class="venobox" title="Sampling Layer">Sampling Layer</a></h3>
+                                            class="venobox" title="Sampling Layer">Sampling Points</a></h3>
                                     <a href="assets/img/portfolio/Sampling_Layer.png" data-gall="portfolioGallery"
                                         class="venobox" title="Sampling Layer"><i class="icofont-plus"></i></a>
                                 </div>
@@ -685,117 +692,7 @@
                 </div>
             </section><!-- End Our Portfolio Section -->
 
-            <!-- ======= Frequently Asked Questions Section ======= -->
-            <section id="faq" class="faq ">
-                <div class="container">
-
-                    <div class="section-title">
-                        <h2>Challenges Faced</h2>
-                    </div>
-
-                    <ul class="faq-list">
-
-                        <li>
-                            <a data-toggle="collapse" class="" href="#faq1"> Processing of the system slow down.<i
-                                    class="icofont-simple-up"></i></a>
-                            <div id="faq1" class="collapse show" data-parent=".faq-list">
-                                <p>
-                                    As the Worldpop-PopulationCount data was very big the Qgis tool slow down and thats
-                                    why each processing was taking time to process.
-                                </p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <a data-toggle="collapse" href="#faq2" class="collapsed">New to the QGIS Framework<i
-                                    class="icofont-simple-up"></i></a>
-                            <div id="faq2" class="collapse" data-parent=".faq-list">
-                                <p>
-                                    It was a new exposure for our group to the QGIS tool, at some steps it took
-                                    additional efforts to learn about the specific Plugin
-                                    or Processing tool.
-                                </p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <a data-toggle="collapse" href="#faq3" class="collapsed">Handling of Data Type for each
-                                Layer.<i class="icofont-simple-up"></i></a>
-                            <div id="faq3" class="collapse" data-parent=".faq-list">
-                                <p>
-                                    We need to have the integer data type for each layer but due to the use of raster
-                                    calculator each time we have to be carefully
-                                    convert each layer to integer data type.
-                                </p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <a data-toggle="collapse" href="#faq4" class="collapsed">Handling Null Values for each
-                                layers.<i class="icofont-simple-up"></i></a>
-                            <div id="faq4" class="collapse" data-parent=".faq-list">
-                                <p>
-                                    We have to align the Null values for different layers for intercomparison. After
-                                    each conversion of data type
-                                    and processing of layer we have to check the null values carefuly.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-
-                </div>
-            </section><!-- End Frequently Asked Questions Section -->
-
-            <!-- ======= Our Team Section ======= -->
-            <section id="team" class="team section-bg">
-                <div class="container">
-
-                    <div class="section-title">
-                        <h2>Our Group</h2>
-                        <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.
-                            Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit
-                            alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                            <div class="member">
-                                <img src="assets/img/team/Juan.jpg" alt="">
-                                <h4>Juan Pablo Duque Ordoñez </h4>
-                                <span>Msc. Geoinformatics Engineering Student</span>
-                                <p>
-                                    Politecnico di Milano
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                            <div class="member">
-                                <img src="assets/img/team/Nashwan.jpg" alt="">
-                                <h4>Khairalla Nshwan</h4>
-                                <span>Msc. Geoinformatics Engineering Student</span>
-                                <p>
-                                    Politecnico di Milano
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                            <div class="member">
-                                <img src="assets/img/team/Priyansh.jpg" alt="">
-                                <h4>Kumar Priyansh</h4>
-                                <span>Msc. Geoinformatics Engineering Student</span>
-                                <p>
-                                    Politecnico di Milano
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section><!-- End Our Team Section -->
-
+            
 
 
         </main><!-- End #main -->
@@ -804,7 +701,7 @@
         <footer id="footer">
             <div class="container">
                 <div class="copyright">
-                    &copy; Copyright <strong><span>Amoeba</span></strong>. All Rights Reserved
+                    &copy; Copyright <strong><span>Politecnico di Milano</span></strong>. All Rights Reserved
                 </div>
                 <div class="credits">
                     <!-- All the links in the footer should remain intact. -->
