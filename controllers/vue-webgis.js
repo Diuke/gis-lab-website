@@ -70,7 +70,29 @@ let styleParams = {
     points: 4,
     radius: 4
 }
-let greenSquare = new ol.style.Style({
+let blueSquare = new ol.style.Style({ //BOTH
+    image: new ol.style.RegularShape({
+        fill: new ol.style.Fill({
+            color: '#037bfc'
+        }),
+        stroke: stroke,
+        points: styleParams.points,
+        radius: styleParams.radius,
+        angle: Math.PI / 4,
+    }),
+});
+let blackSquare = new ol.style.Style({ //NONE
+    image: new ol.style.RegularShape({
+        fill: new ol.style.Fill({
+            color: '#000000'
+        }),
+        stroke: stroke,
+        points: styleParams.points,
+        radius: styleParams.radius,
+        angle: Math.PI / 4,
+    }),
+});
+let greenSquare = new ol.style.Style({ //GHS
     image: new ol.style.RegularShape({
         fill: new ol.style.Fill({
             color: '#319c19'
@@ -81,7 +103,7 @@ let greenSquare = new ol.style.Style({
         angle: Math.PI / 4,
     }),
 });
-let redSquare = new ol.style.Style({
+let redSquare = new ol.style.Style({ //WORLDPOP
     image: new ol.style.RegularShape({
         fill: new ol.style.Fill({
             color: '#de3b35'
@@ -115,10 +137,18 @@ let all_samples = new ol.layer.Vector({
         url: "http://ec2-54-80-227-106.compute-1.amazonaws.com/geoserver/gis_lab/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=gis_lab:all_samples&outputFormat=application/json"
     }),
     style: (feature, resolution) => {
-        if (feature.get('Match') == "Yes") {
+        let ghs = feature.get('ghs');
+        let worldpop = feature.get('worldpop');
+        let interpreted = feature.get('interprete');
+        console.log(ghs + ", " + worldpop + ", " + interpreted);
+        if(ghs == worldpop && worldpop == interpreted) {
+            return blueSquare;
+        } else if(ghs != worldpop && ghs == interpreted) {
             return greenSquare;
-        } else {
+        } else if(ghs != worldpop && worldpop == interpreted) {
             return redSquare;
+        } else {
+            return blackSquare;
         }
     }
 
@@ -265,10 +295,10 @@ var app = new Vue({
                     this.layer_array[0].layer,
                     this.layer_array[1].layer,
                     this.layer_array[2].layer,
-                    this.layer_array[3].layer,
                     this.layer_array[5].layer,
                     this.layer_array[6].layer,
                     this.layer_array[7].layer,
+                    this.layer_array[3].layer,
                     this.layer_array[4].layer,
                 ],
                 view: new ol.View({

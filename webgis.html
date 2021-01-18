@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!--<base href="/">-->
     <base href="/gis-lab-website/">
+    <!--<base href="/gis-lab-website/">-->
+    <!--<base href="/">-->
 
     <title>GISLAB - WebGIS</title>
     <meta content="" name="descriptison">
@@ -148,10 +149,12 @@
 
                 <div v-if="layer_array[3].visible">
                     <h5 class="leyend-category">Classified samples</h5>
-                    <h5 class="leyend-attribute">Match:</h5>
+                    <h5 class="leyend-attribute">Interpreted Match:</h5>
                     <ul class="leyend-list">
-                        <li class="leyend-value"><span style="color: #319c19">█</span> Yes</li>
-                        <li class="leyend-value"><span style="color: #de3b35">█</span> No</li>
+                        <li class="leyend-value"><span style="color: #037bfc">█</span> Both</li>
+                        <li class="leyend-value"><span style="color: #319c19">█</span> GHS</li>
+                        <li class="leyend-value"><span style="color: #de3b35">█</span> WorldPOP</li>
+                        <li class="leyend-value"><span style="color: #000000">█</span> None</li>
                     </ul>
                 </div>
 
